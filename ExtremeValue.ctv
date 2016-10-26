@@ -48,6 +48,7 @@ If you think information is not accurate or if we have omitted a package or impo
                   </li>
                   <li> The package <pkg>ismev</pkg> provides a collection of three functions to fit the GEV (diagnostic plot, MLE, likelihood profile) and follows the book of Coles (2001).
                   </li>
+                  <li>The package <pkg>mev</pkg> has a function using the Smith (1987) penultimate approximation for block maxima approach.</li>
               </ul>
           </li>
           <li><h3>Peak-Over-Threshold by GPD approach:</h3>
@@ -66,6 +67,7 @@ If you think information is not accurate or if we have omitted a package or impo
                   
                   <li> The package <pkg>ismev</pkg> provides a collection of three functions to fit the GPD (diagnostic plot, MLE over a range of thresholds, likelihood profile) and follows the book of Coles (2OO1).
                   </li>
+                  <li>The package <pkg>mev</pkg> provides functions to simulate data from GPD and multiple method to estimate the parameters (optimization, MLE, Bayesian methods and the method used in the <pkg>ismev</pkg> package).</li>
               </ul>
           </li>
           <li><h3>Extremal index estimation approach:</h3>
@@ -75,6 +77,7 @@ If you think information is not accurate or if we have omitted a package or impo
                   <li>the package <pkg>evir</pkg> includes extremal index estimation.</li>
                   <li>The package <pkg>extRemes</pkg> also provides EVDs univariate estimation for the block maxima and poisson point process approache by MLE. It also incorporates a non-stationarity through the parameters.</li>
                   <li>The package <pkg>fExtremes</pkg> provides univariate data processing and modelling. It includes extremal index estimation.</li>
+                  <li>The package <pkg>mev</pkg> provides extremal index estimators based on interexceedance time (MLE and iteratively reweigthed least square estimators of Suveges (2007)). It provides the information matrix test statistic proposed by Suveges and Davison (2010) and MLE for the extremal index.</li>
               </ul>
           </li>
           <li><h3>Regression models</h3>
@@ -175,6 +178,11 @@ If you think information is not accurate or if we have omitted a package or impo
       <em>Modelling Extremal Events for Insurance and Finance</em>, Springer-Verlag.</li>
   <li>S.I. Resnick (1987).
       <em>Extreme Values, Regular Variation and Point Processes</em>, Springer-Verlag.</li>
+<li>Smith, R.L. (1987). Approximations in extreme value theory. Technical report 205, Center for
+Stochastic Process, University of North Carolina, 1–34.</li>
+<li>Suveges (2007) Likelihood estimation of the extremal index. Extremes, 10(1), 41-55.</li>
+<li> Suveges and Davison (2010), Model misspecification in peaks over threshold analysis. Annals of
+Applied Statistics, 4(1), 203-221.</li>
 </ul>
 </info> 
 
@@ -191,6 +199,7 @@ If you think information is not accurate or if we have omitted a package or impo
   <pkg>lmom</pkg>
   <pkg>lmomRFA</pkg>
   <pkg>lmomco</pkg>
+  <pkg>mev</pkg>
   <pkg>RTDE</pkg>
   <pkg>SpatialExtremes</pkg>
   <pkg>texmex</pkg>
