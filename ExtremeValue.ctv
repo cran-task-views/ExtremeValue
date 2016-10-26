@@ -1,0 +1,206 @@
+<CRANTaskView> 
+
+<name>ExtremeValue</name> 
+<topic>Extreme Value Analysis</topic> 
+<maintainer email="Christophe.Dutang@ensimag.fr">Christophe Dutang, Kevin Jaunatre</maintainer> 
+<version>2016-10-19</version>
+
+<info> 
+
+<p>
+Extreme values modelling and estimation are an important challenge in various domains of application,
+such as environment, hydrology, finance, actuarial science, just to name a few.
+The restriction to the analysis of extreme values may be justified since the extreme part 
+of a sample can be of a great importance. That is, it may exhibit a larger risk potential such as
+high concentration of air pollutants, flood, extreme claim sizes, price shocks in the four 
+previous topics respectively.
+The statistical analysis of extreme may be spread out in many packages depending
+on the topic of application.
+In this task view, we present the packages from a methodological side.</p>
+
+<p>
+Applications of extreme value theory can be found in other task views: 
+for financial and actuarial analysis in the <view>Finance</view> task view, 
+for environmental analysis in the <view>Environmetrics</view> task view.
+General implementation of probability distributions is studied
+in the <view>Distributions</view> task view.
+</p>
+
+<p>The maintainers greatfully acknowledge 
+E. Gilleland, M. Ribatet and A. Stephenson for their review for extreme value analysis 
+packages (2013) and  Achim Zeileis for his useful comments.
+
+If you think information is not accurate or if we have omitted a package or important information that should be mentioned here, please let us know.</p>
+
+
+<h2><a name="UnivEVT">Univariate Extreme Value Theory:</a></h2>
+	  <ul>
+          <li><h3>Block Maxima approach:</h3>
+              <ul>
+                  <li> The package <pkg>evd</pkg> provides functions for a wide range of univariate distributions. Modelling function allow estimation of parameters for standard univariate extreme value methods.</li>
+                  <li>The package <pkg>evdbayes</pkg> provides the Bayesian analysis of univariate extreme value models using MCMC methods. It uses likelihood to estimate the parameters of the GEV distributions</li>
+                  <li>the package <pkg>evir</pkg> performs modelling of univariate GEV distributions by maximum likelihood fitting.</li>
+                  <li>The package <pkg>extRemes</pkg> provides EVDs univariate estimation for block maxima model approache by MLE. It also incorporates a non-stationarity through the parameters of the EVDs   and L-moments estimation for the stationnary case for the GEV distributions.</li>
+                  <li>The package <pkg>fExtremes</pkg> provides univariate data processing and modelling. It includes clustering, block maxima identification and exploratory analysis. The estimation of stationary models for the GEV is provided by maximum likelihood and probability weighted moments. </li>
+                  <li>The package <pkg>lmom</pkg> has functions to fit probability distributions from GEV distributions to data using the low-order L-moments. </li>
+                  <li>The package <pkg>lmomRFA</pkg> extends package <pkg>lmom</pkg> and implements all the major components for regional frequency analysis using L-moments.</li>
+                  <li>The package <pkg>texmex</pkg> provides a univariate extreme value modeling approach for GEV distributions by bootstrap, MCMC simulations and maximum likelihood for parameter estimation.
+                  </li>
+                  <li> The package <pkg>ismev</pkg> provides a collection of three functions to fit the GEV (diagnostic plot, MLE, likelihood profile) and follows the book of Coles (2001).
+                  </li>
+              </ul>
+          </li>
+          <li><h3>Peak-Over-Threshold by GPD approach:</h3>
+              <ul>
+                  <li> The package <pkg>evd</pkg> includes univariate estimation for GPD approach by MLE.</li>
+                  <li>The Bayesian analysis of univariate extreme value models using MCMC methods in the package <pkg>evdbayes</pkg> includes the likelihood to estimate GP distributions. </li>
+                  <li>the package <pkg>evir</pkg> performs modelling of univariate GPD by maximum likelihood fitting.</li>
+                  <li>The package <pkg>extRemes</pkg> provides EVDs univariate estimation for GPD approach by MLE. A non-stationarity through the parameters of the EVDs and L-moments estimation for the stationnary case for the GPD distributions is also included.</li>
+                  <li> The package <pkg>extremefit</pkg> provides modelization of exceedances over a threshold in the Pareto type tail. It computes an adaptive choice of the threshold. </li>
+                  <li>The package <pkg>fExtremes</pkg> includes the estimation of stationary models for the GPD by maximum likelihood and probability weighted moments. </li>
+                  <li>The package <pkg>lmom</pkg> includes functions to fit probability distributions from GPD to data using the low-order L-moments. </li>
+                  <li>The package <pkg>lmomRFA</pkg> extends package <pkg>lmom</pkg> and implements all the major components for regional frequency analysis using L-moments.</li>
+                  <li>Package <pkg>texmex</pkg> provides a univariate extreme value modeling approach for GPD distributions by bootstrap, MCMC simulations and maximum likelihood for parameter estimation.</li>
+                  <li> 
+                  The POT package  (<a href="https://CRAN.R-project.org/package=POT">archived CRAN</a>) provides multiple estimators of the GPD parameters (MLE, L-Moments, method of median, minimum density power divergence). L-moments diagrams and from the properties of a non-homogeneous Poisson process techniques are provided for the selection of the threshold. </li>
+                  
+                  <li> The package <pkg>ismev</pkg> provides a collection of three functions to fit the GPD (diagnostic plot, MLE over a range of thresholds, likelihood profile) and follows the book of Coles (2OO1).
+                  </li>
+              </ul>
+          </li>
+          <li><h3>Extremal index estimation approach:</h3>
+              <ul>
+                  <li> The package <pkg>evd</pkg> implements univariate estimation for extremal index estimation approach.</li>
+                  <li>The package <pkg>evdbayes</pkg> includes point process characterisation</li>
+                  <li>the package <pkg>evir</pkg> includes extremal index estimation.</li>
+                  <li>The package <pkg>extRemes</pkg> also provides EVDs univariate estimation for the block maxima and poisson point process approache by MLE. It also incorporates a non-stationarity through the parameters.</li>
+                  <li>The package <pkg>fExtremes</pkg> provides univariate data processing and modelling. It includes extremal index estimation.</li>
+              </ul>
+          </li>
+          <li><h3>Regression models</h3>
+          <ul><li>
+              The package <pkg>VGAM</pkg> offers additive modelling for extreme value analysis. The estimation for vector generalised additive models is performed using a backfitting algorithm and employs a penalized likelihood for the smoothing splines. It is the only package known to the authors that performs additive modelling for a range of extreme value analysis. It includes both GEV and GP distributions.
+            </li>
+            
+            <li> The package <pkg>ismev</pkg> provides a collection of functions to fit a point process with explanatory variables (diagnostic plot, MLE) and follows the book of Coles (2001).
+                  </li>
+            </ul>
+          </li>
+          
+          <li><h3>Copula approach:</h3>
+              <ul>
+                  <li>Package <pkg>copula</pkg> provides utilities for exploring and modelling a wide range of commonly used copulas, see also the <view>Distributions</view> task view (copula section).
+                  </li>
+                  
+              </ul>
+          </li>
+	   	  </ul>
+
+
+
+<h2><a name="BivEVT">Bivariate Extreme Value Theory:</a></h2>
+	  <ul>
+          <li><h3>Block Maxima approach:</h3>
+              <ul>
+                  <li> The package <pkg>evd</pkg> provides functions for multivariate distributions. Modelling function allow estimation of parameters for class of bivariate extreme value distributions. Both parametric and non-parametric estimation of bivariate EVD can be performed.</li>
+            </ul>
+          </li>
+          <li><h3>Peak-Over-Threshold by GPD approach:</h3>
+              <ul>
+                  <li> The package <pkg>evd</pkg> implements bivariate threshold modelling using censored likelihood methodology.</li>
+                  <li>The single multivariate implementation in the package <pkg>evir</pkg> is a bivariate threshold method.</li>
+                  <li> The package <pkg>extremefit</pkg> provides modelization of exceedances over a threshold in the Pareto type tail depending on a time covariate. It provides an adaptive choice of the threshold depending of the covariate. </li>
+                  <li> 
+                  The POT package  (<a href="https://CRAN.R-project.org/package=POT">archived CRAN</a>) provides estimators of the GPD parameters in the bivariate case.
+                  </li>
+                  
+              </ul>
+          </li>
+          <li><h3>Tail dependence coefficient approach:</h3>
+              <ul>
+                  <li> The package <pkg>RTDE</pkg> implements bivariate estimation for the tail dependence coefficient.</li>
+              </ul>
+          </li>
+        </ul>
+
+<h2><a name="MultiEVT">Multivariate Extreme Value Theory:</a></h2>      
+	  <ul>
+          <li><h3>Block Maxima approach:</h3>
+              <ul>
+                  <li>The package <pkg>lmomco</pkg> is similar to the <pkg>lmom</pkg> but also implements recent advances in L-moments estimation, including L-moments for censored data, trimmed L-moments and L-moment for multivariate analysis for GEV distributions.
+                  </li>
+                  <li>The package <pkg>SpatialExtremes</pkg> provides max-stable processes and uses weighted pairwise likelihood estimator to fit the processes.
+                  </li>
+              </ul>
+          </li>
+          <li><h3>Peak-Over-Threshold by GPD approach:</h3>
+              <ul>
+                  <li>The package <pkg>lmomco</pkg> also implements L-moments multivariate analysis for GPD distributions.
+                  </li>
+                  <li>The package <pkg>SpatialExtremes</pkg> includes GPD method to modelize spatial extremes using                           Bayesian hierarchical models with a conditionnal independence assumption.
+
+                  </li>
+                  <li>Package <pkg>texmex</pkg> provides a conditional multivariate extreme value modeling approach which is useful for multivariate processes where interest is in events occuring such that only a subset of the margins are extreme.
+                  </li>
+              </ul>
+          </li>
+          <li><h3>Copula approach:</h3>
+              <ul>
+                  <li>Package <pkg>copula</pkg> provides utilities for exploring and modelling a wide range of commonly used copulas. Extreme value copulas and non-parametric estimates of extreme value copulas are implemented.
+                  See also the <view>Distributions</view> task view (copula section).
+                  </li>
+                  <li>The package <pkg>SpatialExtremes</pkg>includes copula distributions.</li>
+              </ul>
+          </li>
+     </ul>
+
+
+
+
+<h2><a name="References">Classical books and review papers:</a></h2>      
+<ul>
+  <li>E. Gilleland, M. Ribatet, A. Stephenson (2013). 
+      A Software Review for Extreme Value Analysis, <em>Extremes</em>, <b>16</b>, 103-119.</li>
+  <li>R.-D. Reiss, M. Thomas (2007).
+      <em>Statistical Analysis of Extreme Values with Applications to Insurance, Finance, Hydrology and Other Fields</em>, Springer-Verlag.</li> 
+  <li>L. de Haan, A. Ferreira (2006).
+      <em>Extreme Value Theory: An Introduction</em>, Springer-Verlag.</li>
+  <li>J. Beirlant, Y. Goegebeur, J. Teugels, J. Segers (2004).
+      <em>Statistics of Extremes: Theory and Applications</em>, John Wiley &amp; Sons.</li>
+  <li>B. Finkenstaedt, H. Rootzen (2004).
+      <em>Extreme Values in Finance, Telecommunications, and the Environment</em>, Chapman &amp; Hall/CRC.</li>
+  <li>S. Coles (2001).
+      <em>An Introduction to Statistical Modeling of Extreme Values</em>, Springer-Verlag.</li>    
+  <li>P. Embrechts, C. Klueppelberg, T. Mikosch (1997).
+      <em>Modelling Extremal Events for Insurance and Finance</em>, Springer-Verlag.</li>
+  <li>S.I. Resnick (1987).
+      <em>Extreme Values, Regular Variation and Point Processes</em>, Springer-Verlag.</li>
+</ul>
+</info> 
+
+
+<packagelist>
+  <pkg>copula</pkg>
+  <pkg priority="core">evd</pkg> 
+  <pkg>evdbayes</pkg>
+  <pkg priority="core">evir</pkg>
+  <pkg>extremefit</pkg>
+  <pkg>extRemes</pkg>
+  <pkg>fExtremes</pkg> 
+  <pkg>ismev</pkg>
+  <pkg>lmom</pkg>
+  <pkg>lmomRFA</pkg>
+  <pkg>lmomco</pkg>
+  <pkg>RTDE</pkg>
+  <pkg>SpatialExtremes</pkg>
+  <pkg>texmex</pkg>
+  <pkg>VGAM</pkg>
+</packagelist> 
+
+<links> 
+
+<a href="http://link.springer.com/article/10.1007/s10687-012-0155-0">Gilleland, Eric, Mathieu Ribatet, and Alec G. Stephenson, A software review for extreme value analysis Extremes 16(1) (2013): 103-119</a>
+ 
+</links> 
+
+</CRANTaskView>
