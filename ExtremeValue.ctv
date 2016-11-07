@@ -41,6 +41,7 @@ If you think information is not accurate or if we have omitted a package or impo
                   <li>The package <pkg>evdbayes</pkg> provides the Bayesian analysis of univariate extreme value models using MCMC methods. It uses likelihood to estimate the parameters of the GEV distributions</li>
                   <li>the package <pkg>evir</pkg> performs modelling of univariate GEV distributions by maximum likelihood fitting.</li>
                   <li>The package <pkg>extRemes</pkg> provides EVDs univariate estimation for block maxima model approache by MLE. It also incorporates a non-stationarity through the parameters of the EVDs   and L-moments estimation for the stationnary case for the GEV distributions.</li>
+                  <li>The package <pkg>extremeStat</pkg> includes functions to fit multiple GEV distributions types available in the package <pkg>lmomco</pkg> using linear moments to estimate the parameters. </li>
                   <li>The package <pkg>fExtremes</pkg> provides univariate data processing and modelling. It includes clustering, block maxima identification and exploratory analysis. The estimation of stationary models for the GEV is provided by maximum likelihood and probability weighted moments. </li>
                   <li>The package <pkg>lmom</pkg> has functions to fit probability distributions from GEV distributions to data using the low-order L-moments. </li>
                   <li>The package <pkg>lmomRFA</pkg> extends package <pkg>lmom</pkg> and implements all the major components for regional frequency analysis using L-moments.</li>
@@ -56,8 +57,9 @@ If you think information is not accurate or if we have omitted a package or impo
                   <li> The package <pkg>evd</pkg> includes univariate estimation for GPD approach by MLE.</li>
                   <li>The Bayesian analysis of univariate extreme value models using MCMC methods in the package <pkg>evdbayes</pkg> includes the likelihood to estimate GP distributions. </li>
                   <li>the package <pkg>evir</pkg> performs modelling of univariate GPD by maximum likelihood fitting.</li>
-                  <li>The package <pkg>extRemes</pkg> provides EVDs univariate estimation for GPD approach by MLE. A non-stationarity through the parameters of the EVDs and L-moments estimation for the stationnary case for the GPD distributions is also included.</li>
                   <li> The package <pkg>extremefit</pkg> provides modelization of exceedances over a threshold in the Pareto type tail. It computes an adaptive choice of the threshold. </li>
+                  <li>The package <pkg>extRemes</pkg> provides EVDs univariate estimation for GPD approach by MLE. A non-stationarity through the parameters of the EVDs and L-moments estimation for the stationnary case for the GPD distributions is also included.</li>
+                  <li>The package <pkg>extremeStat</pkg> includes functions to fit multiple GPD distributions types available in the package <pkg>lmomco</pkg> using linear moments to estimate the parameters. </li>
                   <li>The package <pkg>fExtremes</pkg> includes the estimation of stationary models for the GPD by maximum likelihood and probability weighted moments. </li>
                   <li>The package <pkg>lmom</pkg> includes functions to fit probability distributions from GPD to data using the low-order L-moments. </li>
                   <li>The package <pkg>lmomRFA</pkg> extends package <pkg>lmom</pkg> and implements all the major components for regional frequency analysis using L-moments.</li>
@@ -163,6 +165,7 @@ If you think information is not accurate or if we have omitted a package or impo
   <caption>Graphics for univariate extreme value analysis</caption>
   <tr><td><em>Graphic name</em></td> <td><em>Packages</em></td> <td><em>Function names</em></td></tr>
   <tr><td>Dispersion index plot</td> <td>POT</td>  <td><code>diplot</code></td></tr>
+  <tr><td>Distribution fitting plot</td> <td>extremeStat</td>  <td><code>distLplot</code></td></tr>
   <tr><td>Hill plot</td> <td>evir</td>  <td><code>hill</code></td></tr>
   <tr><td>Hill plot</td> <td>extremefit</td>  <td><code>hill</code></td></tr>
   
@@ -242,6 +245,7 @@ Applied Statistics, 4(1), 203-221.</li>
   <pkg priority="core">evir</pkg>
   <pkg>extremefit</pkg>
   <pkg>extRemes</pkg>
+  <pkg>extremeStat</pkg>
   <pkg>fExtremes</pkg> 
   <pkg>ismev</pkg>
   <pkg>lmom</pkg>
