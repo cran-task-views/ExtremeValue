@@ -3,7 +3,7 @@
 <name>ExtremeValue</name> 
 <topic>Extreme Value Analysis</topic> 
 <maintainer email="Christophe.Dutang@ensimag.fr">Christophe Dutang, Kevin Jaunatre</maintainer> 
-<version>2016-10-19</version>
+<version>2016-11-07</version>
 
 <info> 
 
@@ -157,6 +157,54 @@ If you think information is not accurate or if we have omitted a package or impo
           </li>
      </ul>
 
+<h2><a name="Graphics">Classical graphics:</a></h2>      
+
+<br/><table border="0" summary="graphics for extreme value analysis">
+  <caption>Graphics for univariate extreme value analysis</caption>
+  <tr><td><em>Graphic name</em></td> <td><em>Packages</em></td> <td><em>Function names</em></td></tr>
+  <tr><td>Dispersion index plot</td> <td>POT</td>  <td><code>diplot</code></td></tr>
+  <tr><td>Hill plot</td> <td>evir</td>  <td><code>hill</code></td></tr>
+  <tr><td>Hill plot</td> <td>extremefit</td>  <td><code>hill</code></td></tr>
+  
+  <tr><td>L-moment plot</td> <td>POT</td>  <td><code>lmomplot</code></td></tr>
+  
+  <tr><td>Mean residual life plot</td> <td>POT</td>  <td><code>mrlplot</code></td></tr>
+  <tr><td>Mean residual life plot</td> <td>evd</td>  <td><code>mrlplot</code></td></tr>
+  <tr><td>Mean residual life plot</td> <td>evir</td>  <td><code>meplot</code></td></tr>
+  <tr><td>Mean residual life plot</td> <td>ismev</td>  <td><code>mrl.plot</code></td></tr>
+  <tr><td>Mean residual life plot</td> <td>texmex</td>  <td><code>mrl</code></td></tr>
+  
+  <tr><td>QQ Pareto plot</td> <td>POT</td>  <td><code>qplot</code></td></tr>
+  <tr><td>QQ Pareto plot</td> <td>RTDE</td>  <td><code>qqparetoplot</code></td></tr>
+  
+  <tr><td>Threshold choice plot</td> <td>POT</td>  <td><code>tcplot</code></td></tr>
+  <tr><td>Threshold choice plot</td> <td>evd</td>  <td><code>tcplot</code></td></tr>
+  
+  <tr><td>Return level plot</td> <td>texmex</td>  <td><code>rl</code></td></tr>
+
+</table><br/>
+
+<br/><table border="0" summary="graphics for extreme value analysis">  
+  <caption>Graphics for multivariate extreme value analysis</caption>
+  
+  <tr><td>Bivariate threshold choice plot</td> <td>evd</td>  <td><code>bvtcplot</code></td></tr>
+  
+  <tr><td>Dependence measure (chi) plot</td> <td>POT</td>  <td><code>chimeas</code></td></tr>
+  <tr><td>Dependence measure (chi) plot</td> <td>evd</td>  <td><code>chiplot</code></td></tr>
+  <tr><td>Dependence measure (chi) plot</td> <td>texmex</td>  <td><code>chi</code></td></tr>
+  <tr><td>Dependence diagnostic plot within time series</td> <td>POT</td>  <td><code>tsdep.plot</code></td></tr>
+  <tr><td>Extremal index plot</td> <td>POT</td>  <td><code>exiplot</code></td></tr>
+  <tr><td>Extremal index plot</td> <td>evd</td>  <td><code>exiplot</code></td></tr>
+  
+  <tr><td>Madogram</td> <td>SpatialExtremes</td>  <td><code>madogram</code></td></tr>
+  <tr><td>F-Madogram</td> <td>SpatialExtremes</td>  <td><code>fmadogram</code></td></tr>
+  <tr><td>L-Madogram</td> <td>SpatialExtremes</td>  <td><code>lmadogram</code></td></tr>
+  <tr><td>Variogram</td> <td>SpatialExtremes</td>  <td><code>variogram</code></td></tr>
+  
+  
+  <tr><td>Pickands' dependence function plot</td> <td>POT</td>  <td><code>pickdep</code></td></tr>
+  <tr><td>Spectral density plot</td> <td>POT</td>  <td><code>specdens</code></td></tr>
+</table><br/>
 
 
 
