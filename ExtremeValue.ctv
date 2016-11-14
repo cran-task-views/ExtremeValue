@@ -64,14 +64,10 @@ If you think information is not accurate or if we have omitted a package or impo
                   <li>The package <pkg>lmom</pkg> includes functions to fit probability distributions from GPD to data using the low-order L-moments. </li>
                   <li>The package <pkg>lmomRFA</pkg> extends package <pkg>lmom</pkg> and implements all the major components for regional frequency analysis using L-moments.</li>
                   <li>Package <pkg>texmex</pkg> provides a univariate extreme value modeling approach for GPD distributions by bootstrap, MCMC simulations and maximum likelihood for parameter estimation.</li>
-                  <li> 
-                  The POT package  (<a href="https://CRAN.R-project.org/package=POT">archived CRAN</a>) provides multiple estimators of the GPD parameters (MLE, L-Moments, method of median, minimum density power divergence). L-moments diagrams and from the properties of a non-homogeneous Poisson process techniques are provided for the selection of the threshold. </li>
-                  
-                  <li> The package <pkg>ismev</pkg> provides a collection of three functions to fit the GPD (diagnostic plot, MLE over a range of thresholds, likelihood profile) and follows the book of Coles (2OO1).
-                  </li>
+                  <li>The POT package  (<a href="https://CRAN.R-project.org/package=POT">archived CRAN</a>) provides multiple estimators of the GPD parameters (MLE, L-Moments, method of median, minimum density power divergence). L-moments diagrams and from the properties of a non-homogeneous Poisson process techniques are provided for the selection of the threshold. </li>
+                  <li>The package <pkg>ismev</pkg> provides a collection of three functions to fit the GPD (diagnostic plot, MLE over a range of thresholds, likelihood profile) and follows the book of Coles (2OO1).</li>
                   <li>The package <pkg>mev</pkg> provides functions to simulate data from GPD and multiple method to estimate the parameters (optimization, MLE, Bayesian methods and the method used in the <pkg>ismev</pkg> package).</li>
-                  <li>The package <pkg>QRM</pkg> provides functions to fit and graphically assess 
-                  the fit of the GPD.
+                  <li>The package <pkg>QRM</pkg> provides functions to fit and graphically assess the fit of the GPD.</li>
                   
               </ul>
           </li>
@@ -263,6 +259,7 @@ Applied Statistics, 4(1), 203-221.</li>
   <pkg>lmomRFA</pkg>
   <pkg>lmomco</pkg>
   <pkg>mev</pkg>
+  <pkg>QRM</pkg>
   <pkg>RTDE</pkg>
   <pkg>SpatialExtremes</pkg>
   <pkg>texmex</pkg>
