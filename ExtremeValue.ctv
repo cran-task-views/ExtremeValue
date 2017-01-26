@@ -50,6 +50,7 @@ If you think information is not accurate or if we have omitted a package or impo
                   <li> The package <pkg>ismev</pkg> provides a collection of three functions to fit the GEV (diagnostic plot, MLE, likelihood profile) and follows the book of Coles (2001).
                   </li>
                   <li>The package <pkg>mev</pkg> has a function using the Smith (1987) penultimate approximation for block maxima approach.</li>
+                  
               </ul>
           </li>
           <li><h3>Peak-Over-Threshold by GPD approach:</h3>
@@ -79,6 +80,7 @@ If you think information is not accurate or if we have omitted a package or impo
                   <li>The package <pkg>extRemes</pkg> also provides EVDs univariate estimation for the block maxima and poisson point process approache by MLE. It also incorporates a non-stationarity through the parameters.</li>
                   <li>The package <pkg>fExtremes</pkg> provides univariate data processing and modelling. It includes extremal index estimation.</li>
                   <li>The package <pkg>mev</pkg> provides extremal index estimators based on interexceedance time (MLE and iteratively reweigthed least square estimators of Suveges (2007)). It provides the information matrix test statistic proposed by Suveges and Davison (2010) and MLE for the extremal index.</li>
+                  <li>The package <pkg>ReIns</pkg> provides functions for extremal index and splicing approaches in a reinsurance perspective.</li>
               </ul>
           </li>
           <li><h3>Regression models</h3>
@@ -169,6 +171,7 @@ If you think information is not accurate or if we have omitted a package or impo
   <tr><td>Hill plot</td> <td>evir</td>  <td><code>hill</code></td></tr>
   <tr><td>Hill plot</td> <td>extremefit</td>  <td><code>hill</code></td></tr>
   <tr><td>Hill plot</td> <td>QRM</td>  <td><code>hillPlot</code></td></tr>
+  <tr><td>Hill plot</td> <td>ReIns</td>  <td><code>Hill</code></td></tr>
   
   <tr><td>L-moment plot</td> <td>POT</td>  <td><code>lmomplot</code></td></tr>
   
@@ -178,11 +181,16 @@ If you think information is not accurate or if we have omitted a package or impo
   <tr><td>Mean residual life plot</td> <td>ismev</td>  <td><code>mrl.plot</code></td></tr>
   <tr><td>Mean residual life plot</td> <td>texmex</td>  <td><code>mrl</code></td></tr>
   <tr><td>Mean residual life plot</td> <td>QRM</td>  <td><code>MEplot</code></td></tr>
+  <tr><td>Mean residual life plot</td> <td>ReIns</td>  <td><code>MeanExcess</code></td></tr>
   
   <tr><td>QQ Pareto plot</td> <td>POT</td>  <td><code>qplot</code></td></tr>
   <tr><td>QQ Pareto plot</td> <td>RTDE</td>  <td><code>qqparetoplot</code></td></tr>
   <tr><td>QQ Pareto plot</td> <td>QRM</td>  <td><code>plotFittedGPDvsEmpiricalExcesses</code></td></tr>
+  <tr><td>QQ Pareto plot</td> <td>ReIns</td>  <td><code>ParetoQQ</code></td></tr>
   <tr><td>QQ Exponential plot</td> <td>QRM</td>  <td><code>QQplot</code></td></tr>
+  <tr><td>QQ Exponential plot</td> <td>ReIns</td>  <td><code>ExpQQ</code></td></tr>
+  <tr><td>QQ Lognormal plot</td> <td>ReIns</td>  <td><code>LognormalQQ</code></td></tr>
+  <tr><td>QQ Weibull plot</td> <td>ReIns</td>  <td><code>WeibullQQ</code></td></tr>
  
   <tr><td>Risk measure plot</td> <td>QRM</td>  <td><code>RMplot</code></td></tr>
   
@@ -191,6 +199,8 @@ If you think information is not accurate or if we have omitted a package or impo
   <tr><td>Threshold choice plot</td> <td>QRM</td>  <td><code>xiplot</code></td></tr>
   
   <tr><td>Return level plot</td> <td>texmex</td>  <td><code>rl</code></td></tr>
+  <tr><td>Return level plot</td> <td>POT</td>  <td><code>retlev</code></td></tr>
+  <tr><td>Return level plot</td> <td>POT</td>  <td><code>Return</code></td></tr>
 
 </table><br/>
 
@@ -260,6 +270,7 @@ Applied Statistics, 4(1), 203-221.</li>
   <pkg>lmomco</pkg>
   <pkg>mev</pkg>
   <pkg>QRM</pkg>
+  <pkg>ReIns</pkg>
   <pkg>RTDE</pkg>
   <pkg>SpatialExtremes</pkg>
   <pkg>texmex</pkg>
