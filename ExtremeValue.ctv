@@ -51,7 +51,9 @@ If you think information is not accurate or if we have omitted a package or impo
                   <li> The package <pkg>ismev</pkg> provides a collection of three functions to fit the GEV (diagnostic plot, MLE, likelihood profile) and follows the book of Coles (2001).
                   </li>
                   <li>The package <pkg>mev</pkg> has a function using the Smith (1987) penultimate approximation for block maxima approach.</li>
-                  
+                  <li>The package <pkg>Renext</pkg> provides various functions to
+                  fit the GEV distribution using an aggregated renewal POT process. 
+                  </li>
                   
               </ul>
           </li>
@@ -72,6 +74,9 @@ If you think information is not accurate or if we have omitted a package or impo
                   <li>The package <pkg>ismev</pkg> provides a collection of three functions to fit the GPD (diagnostic plot, MLE over a range of thresholds, likelihood profile) and follows the book of Coles (2OO1).</li>
                   <li>The package <pkg>mev</pkg> provides functions to simulate data from GPD and multiple method to estimate the parameters (optimization, MLE, Bayesian methods and the method used in the <pkg>ismev</pkg> package).</li>
                   <li>The package <pkg>QRM</pkg> provides functions to fit and graphically assess the fit of the GPD.</li>
+                  <li>The package <pkg>Renext</pkg> provides various functions to
+                  fit and assess the GPD distribution using an aggregated renewal POT process. 
+                  </li>
                   
               </ul>
           </li>
@@ -192,8 +197,10 @@ If you think information is not accurate or if we have omitted a package or impo
   <tr><td>QQ Pareto plot</td> <td>ReIns</td>  <td><code>ParetoQQ</code></td></tr>
   <tr><td>QQ Exponential plot</td> <td>QRM</td>  <td><code>QQplot</code></td></tr>
   <tr><td>QQ Exponential plot</td> <td>ReIns</td>  <td><code>ExpQQ</code></td></tr>
+  <tr><td>QQ Exponential plot</td> <td>Renext</td>  <td><code>expplot</code></td></tr>
   <tr><td>QQ Lognormal plot</td> <td>ReIns</td>  <td><code>LognormalQQ</code></td></tr>
   <tr><td>QQ Weibull plot</td> <td>ReIns</td>  <td><code>WeibullQQ</code></td></tr>
+  <tr><td>QQ Weibull plot</td> <td>Renext</td>  <td><code>expplot</code></td></tr>
  
   <tr><td>Risk measure plot</td> <td>QRM</td>  <td><code>RMplot</code></td></tr>
   
@@ -204,6 +211,7 @@ If you think information is not accurate or if we have omitted a package or impo
   <tr><td>Return level plot</td> <td>texmex</td>  <td><code>rl</code></td></tr>
   <tr><td>Return level plot</td> <td>POT</td>  <td><code>retlev</code></td></tr>
   <tr><td>Return level plot</td> <td>POT</td>  <td><code>Return</code></td></tr>
+  <tr><td>Return level plot</td> <td>Renext</td>  <td><code>expplot</code></td></tr>
 
 </table><br/>
 
@@ -282,6 +290,8 @@ Applied Statistics, 4(1), 203-221.</li>
 </packagelist> 
 
 <links> 
+
+<a href="http://rpackages.io/views">Download statistics per view</a>
 
 <a href="http://link.springer.com/article/10.1007/s10687-012-0155-0">Gilleland, Eric, Mathieu Ribatet, and Alec G. Stephenson, A software review for extreme value analysis Extremes 16(1) (2013): 103-119</a>
  
