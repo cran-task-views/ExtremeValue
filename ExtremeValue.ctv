@@ -3,7 +3,7 @@
 <name>ExtremeValue</name> 
 <topic>Extreme Value Analysis</topic> 
 <maintainer email="Christophe.Dutang@ensimag.fr">Christophe Dutang, Kevin Jaunatre</maintainer> 
-<version>2017-01-26</version>
+<version>2017-04-28</version>
 
 <info> 
 
@@ -39,6 +39,7 @@ If you think information is not accurate or if we have omitted a package or impo
               <ul>
                   <li> The package <pkg>evd</pkg> provides functions for a wide range of univariate distributions. Modelling function allow estimation of parameters for standard univariate extreme value methods.</li>
                   <li>The package <pkg>evdbayes</pkg> provides the Bayesian analysis of univariate extreme value models using MCMC methods. It uses likelihood to estimate the parameters of the GEV distributions</li>
+                  <li> The package <pkg>revdbayes</pkg> provides the Bayesian analysis of univariate extreme value models using direct random sampling from the posterior distribution, that is, without using MCMC methods.</li>
                   <li>the package <pkg>evir</pkg> performs modelling of univariate GEV distributions by maximum likelihood fitting.</li>
                   <li>The package <pkg>extRemes</pkg> provides EVDs univariate estimation for block maxima model approache by MLE. It also incorporates a non-stationarity through the parameters of the EVDs   and L-moments estimation for the stationnary case for the GEV distributions.</li>
                   <li>The package <pkg>extremeStat</pkg> includes functions to fit multiple GEV distributions types available in the package <pkg>lmomco</pkg> using linear moments to estimate the parameters. </li>
@@ -51,12 +52,14 @@ If you think information is not accurate or if we have omitted a package or impo
                   </li>
                   <li>The package <pkg>mev</pkg> has a function using the Smith (1987) penultimate approximation for block maxima approach.</li>
                   
+                  
               </ul>
           </li>
           <li><h3>Peak-Over-Threshold by GPD approach:</h3>
               <ul>
                   <li> The package <pkg>evd</pkg> includes univariate estimation for GPD approach by MLE.</li>
                   <li>The Bayesian analysis of univariate extreme value models using MCMC methods in the package <pkg>evdbayes</pkg> includes the likelihood to estimate GP distributions. </li>
+                  <li> The package <pkg>revdbayes</pkg> provides the Bayesian analysis of univariate extreme value models using direct random sampling from the posterior distribution, that is, without using MCMC methods.</li>
                   <li>the package <pkg>evir</pkg> performs modelling of univariate GPD by maximum likelihood fitting.</li>
                   <li> The package <pkg>extremefit</pkg> provides modelization of exceedances over a threshold in the Pareto type tail. It computes an adaptive choice of the threshold. </li>
                   <li>The package <pkg>extRemes</pkg> provides EVDs univariate estimation for GPD approach by MLE. A non-stationarity through the parameters of the EVDs and L-moments estimation for the stationnary case for the GPD distributions is also included.</li>
@@ -271,6 +274,7 @@ Applied Statistics, 4(1), 203-221.</li>
   <pkg>mev</pkg>
   <pkg>QRM</pkg>
   <pkg>ReIns</pkg>
+  <pkg>revdbayes</pkg>
   <pkg>RTDE</pkg>
   <pkg>SpatialExtremes</pkg>
   <pkg>texmex</pkg>
