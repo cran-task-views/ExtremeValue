@@ -52,7 +52,7 @@ If you think information is not accurate or if we have omitted a package or impo
                   </li>
                   <li>The package <pkg>mev</pkg> has a function using the Smith (1987) penultimate approximation for block maxima approach.</li>
                   <li>The package <pkg>Renext</pkg> provides various functions to
-                  fit the GEV distribution using an aggregated renewal POT process. 
+                  fit the GEV distribution using an aggregated marked POT process. 
                   </li>
                   
               </ul>
@@ -75,7 +75,7 @@ If you think information is not accurate or if we have omitted a package or impo
                   <li>The package <pkg>mev</pkg> provides functions to simulate data from GPD and multiple method to estimate the parameters (optimization, MLE, Bayesian methods and the method used in the <pkg>ismev</pkg> package).</li>
                   <li>The package <pkg>QRM</pkg> provides functions to fit and graphically assess the fit of the GPD.</li>
                   <li>The package <pkg>Renext</pkg> provides various functions to
-                  fit and assess the GPD distribution using an aggregated renewal POT process. 
+                  fit and assess the GPD distribution using an aggregated marked POT process. 
                   </li>
                   
               </ul>
@@ -200,7 +200,7 @@ If you think information is not accurate or if we have omitted a package or impo
   <tr><td>QQ Exponential plot</td> <td>Renext</td>  <td><code>expplot</code></td></tr>
   <tr><td>QQ Lognormal plot</td> <td>ReIns</td>  <td><code>LognormalQQ</code></td></tr>
   <tr><td>QQ Weibull plot</td> <td>ReIns</td>  <td><code>WeibullQQ</code></td></tr>
-  <tr><td>QQ Weibull plot</td> <td>Renext</td>  <td><code>expplot</code></td></tr>
+  <tr><td>QQ Weibull plot</td> <td>Renext</td>  <td><code>weibplot</code></td></tr>
  
   <tr><td>Risk measure plot</td> <td>QRM</td>  <td><code>RMplot</code></td></tr>
   
@@ -211,7 +211,7 @@ If you think information is not accurate or if we have omitted a package or impo
   <tr><td>Return level plot</td> <td>texmex</td>  <td><code>rl</code></td></tr>
   <tr><td>Return level plot</td> <td>POT</td>  <td><code>retlev</code></td></tr>
   <tr><td>Return level plot</td> <td>POT</td>  <td><code>Return</code></td></tr>
-  <tr><td>Return level plot</td> <td>Renext</td>  <td><code>expplot</code></td></tr>
+  <tr><td>Return level plot</td> <td>Renext</td>  <td><code>plot,lines</code></td></tr>
 
 </table><br/>
 
