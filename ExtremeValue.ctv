@@ -58,6 +58,7 @@ If you think information is not accurate or if we have omitted a package or impo
                   <li>The Bayesian analysis of univariate extreme value models using MCMC methods in the package <pkg>evdbayes</pkg> includes the likelihood to estimate GP distributions. </li>
                   <li>The package <pkg>revdbayes</pkg> provides the Bayesian analysis of univariate extreme value models using direct random sampling from the posterior distribution, that is, without using MCMC methods.</li>
                   <li>The package <pkg>evir</pkg> performs modelling of univariate GPD by maximum likelihood fitting.</li>
+                  <li>The package <pkg>evmix</pkg> provides kernel density estimation and extreme value modelling. It also implements extreme value models and includes help on the choice of the threshold within those models using MLE.</li>
                   <li>The package <pkg>extremefit</pkg> provides modelization of exceedances over a threshold in the Pareto type tail. It computes an adaptive choice of the threshold. </li>
                   <li>The package <pkg>extRemes</pkg> provides EVDs univariate estimation for GPD approach by MLE. A non-stationarity through the parameters of the EVDs and L-moments estimation for the stationnary case for the GPD distributions is also included.</li>
                   <li>The package <pkg>extremeStat</pkg> includes functions to fit multiple GPD distributions types available in the package <pkg>lmomco</pkg> using linear moments to estimate the parameters. </li>
@@ -157,6 +158,7 @@ If you think information is not accurate or if we have omitted a package or impo
   <tr><td>Distribution fitting plot</td> <td>extremeStat</td>  <td><code>distLplot</code></td></tr>
   
   <tr><td>Hill plot</td> <td>evir</td>  <td><code>hill</code></td></tr>
+  <tr><td>Hill plot</td> <td>evmix</td>  <td><code>hillplot</code></td></tr>
   <tr><td>Hill plot</td> <td>extremefit</td>  <td><code>hill</code></td></tr>
   <tr><td>Hill plot</td> <td>QRM</td>  <td><code>hillPlot</code></td></tr>
   <tr><td>Hill plot</td> <td>ReIns</td>  <td><code>Hill</code></td></tr>
@@ -166,10 +168,13 @@ If you think information is not accurate or if we have omitted a package or impo
   <tr><td>Mean residual life plot</td> <td>POT</td>  <td><code>mrlplot</code></td></tr>
   <tr><td>Mean residual life plot</td> <td>evd</td>  <td><code>mrlplot</code></td></tr>
   <tr><td>Mean residual life plot</td> <td>evir</td>  <td><code>meplot</code></td></tr>
+  <tr><td>Mean residual life plot</td> <td>evmix</td>  <td><code>mrlplot</code></td></tr>
   <tr><td>Mean residual life plot</td> <td>ismev</td>  <td><code>mrl.plot</code></td></tr>
   <tr><td>Mean residual life plot</td> <td>texmex</td>  <td><code>mrl</code></td></tr>
   <tr><td>Mean residual life plot</td> <td>QRM</td>  <td><code>MEplot</code></td></tr>
   <tr><td>Mean residual life plot</td> <td>ReIns</td>  <td><code>MeanExcess</code></td></tr>
+  
+  <tr><td>Pickand’s plot</td> <td>evmix</td>  <td><code>pickandsplot</code></td></tr>
   
   <tr><td>QQ Pareto plot</td> <td>POT</td>  <td><code>qplot</code></td></tr>
   <tr><td>QQ Pareto plot</td> <td>RTDE</td>  <td><code>qqparetoplot</code></td></tr>
@@ -184,8 +189,9 @@ If you think information is not accurate or if we have omitted a package or impo
  
   <tr><td>Risk measure plot</td> <td>QRM</td>  <td><code>RMplot</code></td></tr>
   
-  <tr><td>Threshold choice plot</td> <td>POT</td>  <td><code>tcplot</code></td></tr>
   <tr><td>Threshold choice plot</td> <td>evd</td>  <td><code>tcplot</code></td></tr>
+  <tr><td>Threshold choice plot</td> <td>evmix</td>  <td><code>tcplot</code></td></tr>
+  <tr><td>Threshold choice plot</td> <td>POT</td>  <td><code>tcplot</code></td></tr>
   <tr><td>Threshold choice plot</td> <td>QRM</td>  <td><code>xiplot</code></td></tr>
   
   <tr><td>Return level plot</td> <td>texmex</td>  <td><code>rl</code></td></tr>
@@ -251,6 +257,7 @@ Applied Statistics, 4(1), 203-221.</li>
   <pkg priority="core">evd</pkg> 
   <pkg>evdbayes</pkg>
   <pkg priority="core">evir</pkg>
+  <pkg>evmix</pkg>
   <pkg>extremefit</pkg>
   <pkg>extRemes</pkg>
   <pkg>extremeStat</pkg>
