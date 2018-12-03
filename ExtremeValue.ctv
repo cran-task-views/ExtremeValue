@@ -3,7 +3,7 @@
 <name>ExtremeValue</name> 
 <topic>Extreme Value Analysis</topic> 
 <maintainer email="Christophe.Dutang@ensimag.fr">Christophe Dutang, Kevin Jaunatre</maintainer> 
-<version>2017-12-26</version>
+<version>2018-12-03</version>
 
 <info> 
 
@@ -101,7 +101,16 @@ If you think information is not accurate or if we have omitted a package or impo
                   <li>The package <pkg>copula</pkg> provides utilities for exploring and modelling a wide range of commonly used copulas, see also the <view>Distributions</view> task view (copula section).</li>
               </ul>
           </li>
+          
+          <li><h3>Mixture distribution or composite distribution approach:</h3>
+              <ul>
+              <li>The package <pkg>evmix</pkg> provides several functions to
+              fit mixture distributions: either parametric / GPD, 
+              semi-parametric / GPD or non-parametric / GPD.</li>
+              </ul>
+          </li>    
 	  </ul>
+	  
 
 
 <h2><a name="BivEVT">Bivariate Extreme Value Theory:</a></h2>
