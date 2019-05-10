@@ -3,7 +3,7 @@
 <name>ExtremeValue</name> 
 <topic>Extreme Value Analysis</topic> 
 <maintainer email="Christophe.Dutang@ensimag.fr">Christophe Dutang, Kevin Jaunatre</maintainer> 
-<version>2018-12-03</version>
+<version>2019-05-10</version>
 
 <info> 
 
@@ -88,6 +88,8 @@ If you think information is not accurate or if we have omitted a package or impo
                   <li>The package <pkg>fExtremes</pkg> provides univariate data processing and modelling. It includes extremal index estimation.</li>
                   <li>The package <pkg>mev</pkg> provides extremal index estimators based on interexceedance time (MLE and iteratively reweigthed least square estimators of Suveges (2007)). It provides the information matrix test statistic proposed by Suveges and Davison (2010) and MLE for the extremal index.</li>
                   <li>The package <pkg>ReIns</pkg> provides functions for extremal index and splicing approaches in a reinsurance perspective.</li>
+                  <li>The package <pkg>ptsuite</pkg> implements various estimation methods 
+                  for the shape parameter of Pareto distributed data.</li>
               </ul>
           </li>
           <li><h3>Regression models</h3>
@@ -277,6 +279,7 @@ Applied Statistics, 4(1), 203-221.</li>
   <pkg>lmomco</pkg>
   <pkg>mev</pkg>
   <pkg>POT</pkg>
+  <pkg>ptsuite</pkg>
   <pkg>QRM</pkg>
   <pkg>ReIns</pkg>
   <pkg>Renext</pkg>
