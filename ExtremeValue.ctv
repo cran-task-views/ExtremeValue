@@ -41,7 +41,9 @@ If you think information is not accurate or if we have omitted a package or impo
                   <li>The package <pkg>evdbayes</pkg> provides the Bayesian analysis of univariate extreme value models using MCMC methods. It uses likelihood to estimate the parameters of the GEV distributions.</li>
                   <li>The package <pkg>revdbayes</pkg> provides the Bayesian analysis of univariate extreme value models using direct random sampling from the posterior distribution, that is, without using MCMC methods.</li>
                   <li>The package <pkg>evir</pkg> performs modelling of univariate GEV distributions by maximum likelihood fitting.</li>
-                  <li>The package <pkg>extRemes</pkg> provides EVDs univariate estimation for block maxima model approache by MLE. It also incorporates a non-stationarity through the parameters of the EVDs   and L-moments estimation for the stationary case for the GEV distributions.</li>
+                  <li>The package <pkg>extRemes</pkg> provides EVDs univariate estimation for block maxima model approache by MLE. It also incorporates a non-stationarity through the parameters of the EVDs and L-moments estimation for the stationary case for the GEV distributions. Finally, it has also Bayes estimation capabilities.
+                  A separate package <pkg>in2extRemes</pkg> provides some GUI interfaces to <pkg>extRemes</pkg>.
+                  </li>
                   <li>The package <pkg>extremeStat</pkg> includes functions to fit multiple GEV distributions types available in the package <pkg>lmomco</pkg> using linear moments to estimate the parameters. </li>
                   <li>The package <pkg>fExtremes</pkg> provides univariate data processing and modelling. It includes clustering, block maxima identification and exploratory analysis. The estimation of stationary models for the GEV is provided by maximum likelihood and probability weighted moments. </li>
                   <li>The package <pkg>lmom</pkg> has functions to fit probability distributions from GEV distributions to data using the low-order L-moments. </li>
@@ -273,6 +275,7 @@ Applied Statistics, 4(1), 203-221.</li>
   <pkg>extRemes</pkg>
   <pkg>extremeStat</pkg>
   <pkg>fExtremes</pkg> 
+  <pkg>in2extRemes</pkg>
   <pkg>ismev</pkg>
   <pkg>lmom</pkg>
   <pkg>lmomRFA</pkg>
