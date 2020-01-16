@@ -3,7 +3,7 @@
 <name>ExtremeValue</name> 
 <topic>Extreme Value Analysis</topic> 
 <maintainer email="Christophe.Dutang@ensimag.fr">Christophe Dutang, Kevin Jaunatre</maintainer> 
-<version>2019-05-12</version>
+<version>2020-01-16</version>
 
 <info> 
 
@@ -144,20 +144,17 @@ If you think information is not accurate or if we have omitted a package or impo
           <li><h3>Block Maxima approach:</h3>
               <ul>
                   <li>The package <pkg>lmomco</pkg> is similar to the <pkg>lmom</pkg> but also implements recent advances in L-moments estimation, including L-moments for censored data, trimmed L-moments and L-moment for multivariate analysis for GEV distributions.</li>
-                  <li>The package <pkg>SpatialExtremes</pkg> provides max-stable processes and uses weighted pairwise likelihood estimator to fit the processes.</li>
               </ul>
           </li>
           <li><h3>Peak-Over-Threshold by GPD approach:</h3>
               <ul>
                   <li>The package <pkg>lmomco</pkg> also implements L-moments multivariate analysis for GPD distributions.</li>
-                  <li>The package <pkg>SpatialExtremes</pkg> includes GPD method to modelize spatial extremes using Bayesian hierarchical models with a conditionnal independence assumption.</li>
                   <li>The package <pkg>texmex</pkg> provides a conditional multivariate extreme value modeling approach which is useful for multivariate processes where interest is in events occuring such that only a subset of the margins are extreme.</li>
               </ul>
           </li>
           <li><h3>Copula approach:</h3>
               <ul>
                   <li>The package <pkg>copula</pkg> provides utilities for exploring and modelling a wide range of commonly used copulas. Extreme value copulas and non-parametric estimates of extreme value copulas are implemented. See also the <view>Distributions</view> task view (copula section).</li>
-                  <li>The package <pkg>SpatialExtremes</pkg>includes copula distributions.</li>
               </ul>
           </li>
      </ul>
@@ -226,12 +223,6 @@ If you think information is not accurate or if we have omitted a package or impo
   <tr><td>Extremal index plot</td> <td>POT</td>  <td><code>exiplot</code></td></tr>
   <tr><td>Extremal index plot</td> <td>evd</td>  <td><code>exiplot</code></td></tr>
   
-  <tr><td>Madogram</td> <td>SpatialExtremes</td>  <td><code>madogram</code></td></tr>
-  <tr><td>F-Madogram</td> <td>SpatialExtremes</td>  <td><code>fmadogram</code></td></tr>
-  <tr><td>L-Madogram</td> <td>SpatialExtremes</td>  <td><code>lmadogram</code></td></tr>
-  <tr><td>Variogram</td> <td>SpatialExtremes</td>  <td><code>variogram</code></td></tr>
-  
-  
   <tr><td>Pickands' dependence function plot</td> <td>POT</td>  <td><code>pickdep</code></td></tr>
   <tr><td>Spectral density plot</td> <td>POT</td>  <td><code>specdens</code></td></tr>
 </table><br/>
@@ -288,7 +279,6 @@ Applied Statistics, 4(1), 203-221.</li>
   <pkg>Renext</pkg>
   <pkg>revdbayes</pkg>
   <pkg>RTDE</pkg>
-  <pkg>SpatialExtremes</pkg>
   <pkg>texmex</pkg>
   <pkg>threshr</pkg>
   <pkg>VGAM</pkg>
