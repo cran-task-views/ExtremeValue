@@ -3,7 +3,7 @@
 <name>ExtremeValue</name> 
 <topic>Extreme Value Analysis</topic> 
 <maintainer email="Christophe.Dutang@ensimag.fr">Christophe Dutang, Kevin Jaunatre</maintainer> 
-<version>2020-01-16</version>
+<version>2020-01-25</version>
 
 <info> 
 
@@ -71,7 +71,6 @@ If you think information is not accurate or if we have omitted a package or impo
                   <li>The package <pkg>POT</pkg> provides multiple estimators of the GPD parameters (MLE, L-Moments, method of median, minimum density power divergence). L-moments diagrams and from the properties of a non-homogeneous Poisson process techniques are provided for the selection of the threshold. </li>
                   <li>The package <pkg>ismev</pkg> provides a collection of three functions to fit the GPD (diagnostic plot, MLE over a range of thresholds, likelihood profile) and follows the book of Coles (2OO1).</li>
                   <li>The package <pkg>mev</pkg> provides functions to simulate data from GPD and multiple method to estimate the parameters (optimization, MLE, Bayesian methods and the method used in the <pkg>ismev</pkg> package).</li>
-                  <li>The package <pkg>QRM</pkg> provides functions to fit and graphically assess the fit of the GPD.</li>
                   <li>The package <pkg>Renext</pkg> provides various functions to fit and assess the GPD distribution using an aggregated marked POT process.</li>
                   
                   
@@ -170,7 +169,6 @@ If you think information is not accurate or if we have omitted a package or impo
   <tr><td>Hill plot</td> <td>evir</td>  <td><code>hill</code></td></tr>
   <tr><td>Hill plot</td> <td>evmix</td>  <td><code>hillplot</code></td></tr>
   <tr><td>Hill plot</td> <td>extremefit</td>  <td><code>hill</code></td></tr>
-  <tr><td>Hill plot</td> <td>QRM</td>  <td><code>hillPlot</code></td></tr>
   <tr><td>Hill plot</td> <td>ReIns</td>  <td><code>Hill</code></td></tr>
   
   <tr><td>L-moment plot</td> <td>POT</td>  <td><code>lmomplot</code></td></tr>
@@ -181,28 +179,22 @@ If you think information is not accurate or if we have omitted a package or impo
   <tr><td>Mean residual life plot</td> <td>evmix</td>  <td><code>mrlplot</code></td></tr>
   <tr><td>Mean residual life plot</td> <td>ismev</td>  <td><code>mrl.plot</code></td></tr>
   <tr><td>Mean residual life plot</td> <td>texmex</td>  <td><code>mrl</code></td></tr>
-  <tr><td>Mean residual life plot</td> <td>QRM</td>  <td><code>MEplot</code></td></tr>
   <tr><td>Mean residual life plot</td> <td>ReIns</td>  <td><code>MeanExcess</code></td></tr>
   
   <tr><td>Pickand’s plot</td> <td>evmix</td>  <td><code>pickandsplot</code></td></tr>
   
   <tr><td>QQ Pareto plot</td> <td>POT</td>  <td><code>qplot</code></td></tr>
   <tr><td>QQ Pareto plot</td> <td>RTDE</td>  <td><code>qqparetoplot</code></td></tr>
-  <tr><td>QQ Pareto plot</td> <td>QRM</td>  <td><code>plotFittedGPDvsEmpiricalExcesses</code></td></tr>
   <tr><td>QQ Pareto plot</td> <td>ReIns</td>  <td><code>ParetoQQ</code></td></tr>
-  <tr><td>QQ Exponential plot</td> <td>QRM</td>  <td><code>QQplot</code></td></tr>
   <tr><td>QQ Exponential plot</td> <td>ReIns</td>  <td><code>ExpQQ</code></td></tr>
   <tr><td>QQ Exponential plot</td> <td>Renext</td>  <td><code>expplot</code></td></tr>
   <tr><td>QQ Lognormal plot</td> <td>ReIns</td>  <td><code>LognormalQQ</code></td></tr>
   <tr><td>QQ Weibull plot</td> <td>ReIns</td>  <td><code>WeibullQQ</code></td></tr>
   <tr><td>QQ Weibull plot</td> <td>Renext</td>  <td><code>weibplot</code></td></tr>
- 
-  <tr><td>Risk measure plot</td> <td>QRM</td>  <td><code>RMplot</code></td></tr>
   
   <tr><td>Threshold choice plot</td> <td>evd</td>  <td><code>tcplot</code></td></tr>
   <tr><td>Threshold choice plot</td> <td>evmix</td>  <td><code>tcplot</code></td></tr>
   <tr><td>Threshold choice plot</td> <td>POT</td>  <td><code>tcplot</code></td></tr>
-  <tr><td>Threshold choice plot</td> <td>QRM</td>  <td><code>xiplot</code></td></tr>
   
   <tr><td>Return level plot</td> <td>texmex</td>  <td><code>rl</code></td></tr>
   <tr><td>Return level plot</td> <td>POT</td>  <td><code>retlev</code></td></tr>
@@ -274,7 +266,6 @@ Applied Statistics, 4(1), 203-221.</li>
   <pkg>mev</pkg>
   <pkg>POT</pkg>
   <pkg>ptsuite</pkg>
-  <pkg>QRM</pkg>
   <pkg>ReIns</pkg>
   <pkg>Renext</pkg>
   <pkg>revdbayes</pkg>
