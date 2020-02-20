@@ -3,7 +3,7 @@
 <name>ExtremeValue</name> 
 <topic>Extreme Value Analysis</topic> 
 <maintainer email="Christophe.Dutang@ensimag.fr">Christophe Dutang, Kevin Jaunatre</maintainer> 
-<version>2020-02-17</version>
+<version>2020-02-20</version>
 
 <info> 
 
@@ -48,7 +48,6 @@ If you think information is not accurate or if we have omitted a package or impo
                   <li>The package <pkg>fExtremes</pkg> provides univariate data processing and modelling. It includes clustering, block maxima identification and exploratory analysis. The estimation of stationary models for the GEV is provided by maximum likelihood and probability weighted moments. </li>
                   <li>The package <pkg>lmom</pkg> has functions to fit probability distributions from GEV distributions to data using the low-order L-moments. </li>
                   <li>The package <pkg>lmomRFA</pkg> extends package <pkg>lmom</pkg> and implements all the major components for regional frequency analysis using L-moments.</li>
-                  <li>The package <pkg>texmex</pkg> provides a univariate extreme value modeling approach for GEV distributions by bootstrap, MCMC simulations and maximum likelihood for parameter estimation.</li>
                   <li>The package <pkg>ismev</pkg> provides a collection of three functions to fit the GEV (diagnostic plot, MLE, likelihood profile) and follows the book of Coles (2001).</li>
                   <li>The package <pkg>mev</pkg> has a function using the Smith (1987) penultimate approximation for block maxima approach.</li>
                   <li>The package <pkg>Renext</pkg> provides various functions to fit the GEV distribution using an aggregated marked POT process.</li>
@@ -67,7 +66,6 @@ If you think information is not accurate or if we have omitted a package or impo
                   <li>The package <pkg>fExtremes</pkg> includes the estimation of stationary models for the GPD by maximum likelihood and probability weighted moments. </li>
                   <li>The package <pkg>lmom</pkg> includes functions to fit probability distributions from GPD to data using the low-order L-moments. </li>
                   <li>The package <pkg>lmomRFA</pkg> extends package <pkg>lmom</pkg> and implements all the major components for regional frequency analysis using L-moments.</li>
-                  <li>The package <pkg>texmex</pkg> provides a univariate extreme value modeling approach for GPD distributions by bootstrap, MCMC simulations and maximum likelihood for parameter estimation.</li>
                   <li>The package <pkg>POT</pkg> provides multiple estimators of the GPD parameters (MLE, L-Moments, method of median, minimum density power divergence). L-moments diagrams and from the properties of a non-homogeneous Poisson process techniques are provided for the selection of the threshold. </li>
                   <li>The package <pkg>ismev</pkg> provides a collection of three functions to fit the GPD (diagnostic plot, MLE over a range of thresholds, likelihood profile) and follows the book of Coles (2OO1).</li>
                   <li>The package <pkg>mev</pkg> provides functions to simulate data from GPD and multiple method to estimate the parameters (optimization, MLE, Bayesian methods and the method used in the <pkg>ismev</pkg> package).</li>
@@ -149,7 +147,6 @@ If you think information is not accurate or if we have omitted a package or impo
           <li><h3>Peak-Over-Threshold by GPD approach:</h3>
               <ul>
                   <li>The package <pkg>lmomco</pkg> also implements L-moments multivariate analysis for GPD distributions.</li>
-                  <li>The package <pkg>texmex</pkg> provides a conditional multivariate extreme value modeling approach which is useful for multivariate processes where interest is in events occuring such that only a subset of the margins are extreme.</li>
               </ul>
           </li>
           <li><h3>Copula approach:</h3>
@@ -180,7 +177,6 @@ If you think information is not accurate or if we have omitted a package or impo
   <tr><td>Mean residual life plot</td> <td>evir</td>  <td><code>meplot</code></td></tr>
   <tr><td>Mean residual life plot</td> <td>evmix</td>  <td><code>mrlplot</code></td></tr>
   <tr><td>Mean residual life plot</td> <td>ismev</td>  <td><code>mrl.plot</code></td></tr>
-  <tr><td>Mean residual life plot</td> <td>texmex</td>  <td><code>mrl</code></td></tr>
   <tr><td>Mean residual life plot</td> <td>QRM</td>  <td><code>MEplot</code></td></tr>
   <tr><td>Mean residual life plot</td> <td>ReIns</td>  <td><code>MeanExcess</code></td></tr>
   
@@ -204,7 +200,6 @@ If you think information is not accurate or if we have omitted a package or impo
   <tr><td>Threshold choice plot</td> <td>POT</td>  <td><code>tcplot</code></td></tr>
   <tr><td>Threshold choice plot</td> <td>QRM</td>  <td><code>xiplot</code></td></tr>
   
-  <tr><td>Return level plot</td> <td>texmex</td>  <td><code>rl</code></td></tr>
   <tr><td>Return level plot</td> <td>POT</td>  <td><code>retlev</code></td></tr>
   <tr><td>Return level plot</td> <td>POT</td>  <td><code>Return</code></td></tr>
   <tr><td>Return level plot</td> <td>Renext</td>  <td><code>plot,lines</code></td></tr>
@@ -218,7 +213,6 @@ If you think information is not accurate or if we have omitted a package or impo
   
   <tr><td>Dependence measure (chi) plot</td> <td>POT</td>  <td><code>chimeas</code></td></tr>
   <tr><td>Dependence measure (chi) plot</td> <td>evd</td>  <td><code>chiplot</code></td></tr>
-  <tr><td>Dependence measure (chi) plot</td> <td>texmex</td>  <td><code>chi</code></td></tr>
   <tr><td>Dependence diagnostic plot within time series</td> <td>POT</td>  <td><code>tsdep.plot</code></td></tr>
   <tr><td>Extremal index plot</td> <td>POT</td>  <td><code>exiplot</code></td></tr>
   <tr><td>Extremal index plot</td> <td>evd</td>  <td><code>exiplot</code></td></tr>
@@ -279,7 +273,6 @@ Applied Statistics, 4(1), 203-221.</li>
   <pkg>Renext</pkg>
   <pkg>revdbayes</pkg>
   <pkg>RTDE</pkg>
-  <pkg>texmex</pkg>
   <pkg>threshr</pkg>
   <pkg>VGAM</pkg>
 </packagelist> 
