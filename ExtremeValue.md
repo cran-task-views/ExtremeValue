@@ -1,9 +1,9 @@
 ---
 name: ExtremeValue
 topic: Extreme Value Analysis
-maintainer: Christophe Dutang, Kevin Jaunatre
+maintainer: Christophe Dutang
 email: Christophe.Dutang@ensimag.fr
-version: 2021-12-29
+version: 2022-03-14
 source: https://github.com/cran-task-views/ExtremeValue/
 ---
 
@@ -28,15 +28,42 @@ implementation of probability distributions is studied in the
 
 The maintainers gratefully acknowledge E. Gilleland, M. Ribatet and A.
 Stephenson for their review for extreme value analysis packages (2013)
+Kevin Jaunatre for his helpful advice
 and Achim Zeileis for his useful comments. If you think information is
 not accurate or if we have omitted a package or important information
 that should be mentioned here, please send an e-mail or submit an issue
 or pull request in the GitHub repository linked above.
 
+
+### Table of contents
+- [Univariate Extreme Value Theory](#UnivEVT)
+  - [Block Maxima approach](#UniBlockMaxima)
+  - [Peak-Over-Threshold by GPD approach](#UniPOT)
+  - [Extremal index estimation approach](#UniExtremalIndex)
+  - [Regression models](#UniRegression)
+  - [Mixture distribution or composite distribution approach](#UniMixture)
+  - [Bayesian approach](#UniBayesian)
+  - [Threshold selection](#UniThreshold)
+
+- [Bivariate Extreme Value Theory](#BivEVT) 
+  - [Block Maxima approach](#BiBlockMaxima)
+  - [Peak-Over-Threshold by GPD approach](#BiPOT)
+  - [Tail dependence coefficient approach](#BiTailDependence)
+  - [Copula approach](#BiCopula)
+
+- [Multivariate Extreme Value Theory](#MultiEVT) 
+  - [Block Maxima approach](#MultiBlockMaxima)
+  - [Peak-Over-Threshold by GPD approach](#BiPOT)
+  - [Tail dependence coefficient approach](#MultiTailDependence)        
+  - [Copula approach](#MultiCopula)
+    
+  
+  
+
 [Univariate Extreme Value Theory:]{#UnivEVT}
 --------------------------------------------
 
--   ### Block Maxima approach:
+-   ### [Block Maxima approach:]{#UniBlockMaxima}
 
     -   The package `r pkg("evd", priority = "core")`
         provides functions for a wide range of univariate distributions.
@@ -86,7 +113,7 @@ or pull request in the GitHub repository linked above.
         functions to fit the GEV distribution using an aggregated marked
         POT process.
 
--   ### Peak-Over-Threshold by GPD approach:
+-   ### [Peak-Over-Threshold by GPD approach:]{#UniPOT}
 
     -   The package `r pkg("evd")` includes univariate
         estimation for GPD approach by MLE.
@@ -147,7 +174,7 @@ or pull request in the GitHub repository linked above.
         cross-validation approach in order to compare the predictive
         performance resulting from a set of thresholds.
 
--   ### Extremal index estimation approach:
+-   ### [Extremal index estimation approach:]{#UniExtremalIndex}
 
     -   The package `r pkg("evd")` implements univariate
         estimation for extremal index estimation approach.
@@ -174,7 +201,7 @@ or pull request in the GitHub repository linked above.
         estimation methods for the shape parameter of Pareto distributed
         data.
 
--   ### Regression models
+-   ### [Regression models:]{#UniRegression}
 
     -   The package `r pkg("VGAM")` offers additive
         modelling for extreme value analysis. The estimation for vector
@@ -187,23 +214,26 @@ or pull request in the GitHub repository linked above.
         of functions to fit a point process with explanatory variables
         (diagnostic plot, MLE) and follows the book of Coles (2001).
 
--   ### Copula approach:
 
-    -   The package `r pkg("copula")` provides utilities for
-        exploring and modelling a wide range of commonly used copulas,
-        see also the `r view("Distributions")` task view
-        (copula section).
 
--   ### Mixture distribution or composite distribution approach:
+-   ### [Mixture distribution or composite distribution approach:]{#UniMixture}
 
     -   The package `r pkg("evmix")` provides several
         functions to fit mixture distributions: either parametric / GPD,
         semi-parametric / GPD or non-parametric / GPD.
+        
+-   ### [Bayesian approach:]{#UniBayesian}
+
+    -   TODO    
+    
+-   ### [Threshold selection:]{#UniThreshold}
+
+    -   TODO        
 
 [Bivariate Extreme Value Theory:]{#BivEVT}
 ------------------------------------------
 
--   ### Block Maxima approach:
+-   ### [Block Maxima approach:]{#BiBlockMaxima}
 
     -   The package `r pkg("evd")` provides functions for
         multivariate distributions. Modelling function allow estimation
@@ -211,7 +241,7 @@ or pull request in the GitHub repository linked above.
         distributions. Both parametric and non-parametric estimation of
         bivariate EVD can be performed.
 
--   ### Peak-Over-Threshold by GPD approach:
+-   ### [Peak-Over-Threshold by GPD approach:]{#BiPOT}
 
     -   The package `r pkg("evd")` implements bivariate
         threshold modelling using censored likelihood methodology.
@@ -224,15 +254,22 @@ or pull request in the GitHub repository linked above.
     -   The package `r pkg("POT")` provides estimators of
         the GPD parameters in the bivariate case.
 
--   ### Tail dependence coefficient approach:
+-   ### [Tail dependence coefficient approach:]{#BiTailDependence}
 
     -   The package `r pkg("RTDE")` implements bivariate
         estimation for the tail dependence coefficient.
+        
+-   ### [Copula approach:]{#BiCopula}
+
+    -   The package `r pkg("copula")` provides utilities for
+        exploring and modelling a wide range of commonly used copulas,
+        see also the `r view("Distributions")` task view
+        (copula section).        
 
 [Multivariate Extreme Value Theory:]{#MultiEVT}
 -----------------------------------------------
 
--   ### Block Maxima approach:
+-   ### [Block Maxima approach:]{#MultiBlockMaxima}
 
     -   The package `r pkg("lmomco")` is similar to the
         `r pkg("lmom")` but also implements recent advances
@@ -240,12 +277,15 @@ or pull request in the GitHub repository linked above.
         trimmed L-moments and L-moment for multivariate analysis for GEV
         distributions.
 
--   ### Peak-Over-Threshold by GPD approach:
+-   ### [Peak-Over-Threshold by GPD approach:]{#MultiPOT}
 
     -   The package `r pkg("lmomco")` also implements
         L-moments multivariate analysis for GPD distributions.
+        
+-   ### [Tail dependence coefficient approach:]{#MultiTailDependence}        
+    -   TODO
 
--   ### Copula approach:
+-   ### [Copula approach:]{#MultiCopula}
 
     -   The package `r pkg("copula")` provides utilities for
         exploring and modelling a wide range of commonly used copulas.
@@ -257,7 +297,7 @@ or pull request in the GitHub repository linked above.
 [Classical graphics:]{#Graphics}
 --------------------------------
 
-\
+
 
   --------------------------- ------------- ------------------------------------
   *Graphic name*              *Packages*    *Function names*
@@ -299,8 +339,8 @@ or pull request in the GitHub repository linked above.
 
   :  Graphics for univariate extreme value analysis
 
-\
-\
+
+
 
   ----------------------------------------------- ----- --------------
   Bivariate threshold choice plot                 evd   `bvtcplot`
@@ -315,7 +355,7 @@ or pull request in the GitHub repository linked above.
 
   :  Graphics for multivariate extreme value analysis
 
-\
+
 
 [Classical books and review papers:]{#References}
 -------------------------------------------------
@@ -327,6 +367,7 @@ or pull request in the GitHub repository linked above.
     Fields* , Springer-Verlag.
 -   L. de Haan, A. Ferreira (2006). *Extreme Value Theory: An
     Introduction* , Springer-Verlag.
+-   Stephenson AG, Gilleland E (2006). Software for the analysis of extreme events: The current state and future directions. *Extremes*, **8**, 87–109.
 -   J. Beirlant, Y. Goegebeur, J. Teugels, J. Segers (2004). *Statistics
     of Extremes: Theory and Applications* , John Wiley & Sons.
 -   B. Finkenstaedt, H. Rootzen (2004). *Extreme Values in Finance,
@@ -348,5 +389,6 @@ or pull request in the GitHub repository linked above.
 
 
 ### Links
--   [Download statistics per view](http://rpackages.io/views)
--   [Gilleland, Eric, Mathieu Ribatet, and Alec G. Stephenson, A software review for extreme value analysis Extremes 16(1) (2013): 103-119](http://link.springer.com/article/10.1007/s10687-012-0155-0)
+
+-   [Gilleland, Eric, Mathieu Ribatet, and Alec G. Stephenson, A software review for extreme value analysis Extremes 16(1) (2013): 103-119](https://doi.org/10.1007/s10687-012-0155-0)
+-   [Alec G. Stephenson and Eric Gilleland, Software for the analysis of extreme events: The current state and future directions. Extremes 8:87–109 (2006)](https://doi.org/10.1007/s10687-006-7962-0)
