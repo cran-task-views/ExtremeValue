@@ -65,18 +65,14 @@ or pull request in the GitHub repository linked above.
 
 -   ### [Block Maxima approach:]{#UniBlockMaxima}
 
+    -   The package `r pkg("climextRemes")` provides functions for 
+        fitting GEV via point process fitting for extremes in climate data,
+        providing return values, return probabilities, and return 
+        periods for stationary and nonstationary models. 
     -   The package `r pkg("evd", priority = "core")`
         provides functions for a wide range of univariate distributions.
         Modelling function allow estimation of parameters for standard
         univariate extreme value methods.
-    -   The package `r pkg("evdbayes")` provides the
-        Bayesian analysis of univariate extreme value models using MCMC
-        methods. It uses likelihood to estimate the parameters of the
-        GEV distributions.
-    -   The package `r pkg("revdbayes")` provides the
-        Bayesian analysis of univariate extreme value models using
-        direct random sampling from the posterior distribution, that is,
-        without using MCMC methods.
     -   The package `r pkg("evir", priority = "core")`
         performs modelling of univariate GEV distributions by maximum
         likelihood fitting.
@@ -97,42 +93,53 @@ or pull request in the GitHub repository linked above.
         maxima identification and exploratory analysis. The estimation
         of stationary models for the GEV is provided by maximum
         likelihood and probability weighted moments.
+    -   The package `r pkg("ismev")` provides a collection
+        of three functions to fit the GEV (diagnostic plot, MLE,
+        likelihood profile) and follows the book of Coles (2001).    
     -   The package `r pkg("lmom")` has functions to fit
         probability distributions from GEV distributions to data using
         the low-order L-moments.
     -   The package `r pkg("lmomRFA")` extends package
         `r pkg("lmom")` and implements all the major
         components for regional frequency analysis using L-moments.
-    -   The package `r pkg("ismev")` provides a collection
-        of three functions to fit the GEV (diagnostic plot, MLE,
-        likelihood profile) and follows the book of Coles (2001).
-    -   The package `r pkg("mev")` has a function using the
-        Smith (1987) penultimate approximation for block maxima
-        approach.
+    -   The package `r pkg("QRM")` provides a function to fit GEV    
+        in Quantitative Risk Management perspective.
     -   The package `r pkg("Renext")` provides various
         functions to fit the GEV distribution using an aggregated marked
         POT process.
+        
+  --------------- ------- ----------- --------- --------- --------- ----------- ----------- --------------- -------------
+  *package*	      *fun*	  *location*	*scale*	  *shape*	  *fit*	    *argdata*   *outputS4*	*outputS3*      *outputS3par*   
+  climextRemes	  NA      `location`	`scale`	  `shape`	  `fit_gev`	`y`	        NA	        `mle`	          NA
+  evd	            gev	    `loc`	      `scale`	  `shape`	  `fgev`	  `x`	        NA	        `estimate`	    NA
+  evir	          gev	    `mu`	      `sigma`	  `xi`	    `gev`	    `data`	    NA	        `par.ests`	    NA
+  extraDistr	    gev	    `mu`	      `sigma`	  `xi`	    NA	      NA	        NA	        NA	            NA  
+  extRemes	      evd	    `loc`	      `scale`	  `shape`	  `fevd`	  `x`	        NA	        `results`	      `par`
+  fExtremes	      gev	    `mu`	      `beta`	  `xi`      `gevFit`	`x` 	      `fit` 	    `par.ests`	    NA
+  ismev	          NA	    NA	        NA	       NA	      `gev.fit`	`xdat`	    NA	        `mle`	          NA
+  lmomco	        gev	    `xi`	      `alpha`	  `kappa`	  NA	      NA	        NA	        NA	            NA
+  QRM	            GEV	    `mu`	      `sigma`	  `xi`	    `fit.GEV`	`maxima`	  NA	        `par.ests`	    NA
+  revdbayes	      gev	    `loc`	      `scale`	  `shape`	  NA	      NA	        NA	        NA	            NA
+  SpatialExtremes	gev	    `loc`	      `scale`	  `shape`	  NA	      NA	        NA	        NA	            NA
+  texmex	        gev	    `mu`	      `sigma`	  `xi`  	  `evm`	    `y`	        NA	        `coefficients`	NA
+  TLMoments	      gev	    `loc`	      `scale`	  `shape`	  NA	      NA	        NA	        NA	            NA
+  --------------- ------- ----------- --------- --------- --------- ----------- ----------- --------------- -------------
+      
+  :  Summary of GEV density functions and GEV fitting functions
+
 
 -   ### [Peak-Over-Threshold by GPD approach:]{#UniPOT}
 
+    -   The package `r pkg("ercv")` provides a methodology to fit a 
+        generalized Pareto distribution, together with an automatic 
+        threshold selection algorithm.
+    -   The package `r pkg("eva")` provides Goodness-of-fit tests 
+        for selection of r in the r-largest order statistics
+        and threshold selection.
     -   The package `r pkg("evd")` includes univariate
         estimation for GPD approach by MLE.
-    -   The Bayesian analysis of univariate extreme value models using
-        MCMC methods in the package `r pkg("evdbayes")`
-        includes the likelihood to estimate GP distributions.
-    -   The package `r pkg("revdbayes")` provides the
-        Bayesian analysis of univariate extreme value models using
-        direct random sampling from the posterior distribution, that is,
-        without using MCMC methods.
     -   The package `r pkg("evir")` performs modelling of
         univariate GPD by maximum likelihood fitting.
-    -   The package `r pkg("evmix")` provides kernel density
-        estimation and extreme value modelling. It also implements
-        extreme value models and includes help on the choice of the
-        threshold within those models using MLE.
-    -   The package `r pkg("extremefit")` provides
-        modelization of exceedances over a threshold in the Pareto type
-        tail. It computes an adaptive choice of the threshold.
     -   The package `r pkg("extRemes")` provides EVDs
         univariate estimation for GPD approach by MLE. A
         non-stationarity through the parameters of the EVDs and
@@ -145,34 +152,69 @@ or pull request in the GitHub repository linked above.
     -   The package `r pkg("fExtremes")` includes the
         estimation of stationary models for the GPD by maximum
         likelihood and probability weighted moments.
+    -   The package `r pkg("ismev")` provides a collection
+        of three functions to fit the GPD (diagnostic plot, MLE over a
+        range of thresholds, likelihood profile) and follows the book of
+        Coles (2OO1).    
     -   The package `r pkg("lmom")` includes functions to
         fit probability distributions from GPD to data using the
         low-order L-moments.
     -   The package `r pkg("lmomRFA")` extends package
         `r pkg("lmom")` and implements all the major
         components for regional frequency analysis using L-moments.
+    -   The package `r pkg("mev")` provides functions to
+        simulate data from GPD and multiple method to estimate the
+        parameters (optimization, MLE, Bayesian methods and the method
+        used in the `r pkg("ismev")` package).        
     -   The package `r pkg("POT")` provides multiple
         estimators of the GPD parameters (MLE, L-Moments, method of
         median, minimum density power divergence). L-moments diagrams
         and from the properties of a non-homogeneous Poisson process
         techniques are provided for the selection of the threshold.
-    -   The package `r pkg("ismev")` provides a collection
-        of three functions to fit the GPD (diagnostic plot, MLE over a
-        range of thresholds, likelihood profile) and follows the book of
-        Coles (2OO1).
-    -   The package `r pkg("mev")` provides functions to
-        simulate data from GPD and multiple method to estimate the
-        parameters (optimization, MLE, Bayesian methods and the method
-        used in the `r pkg("ismev")` package).
     -   The package `r pkg("QRM")` provides functions to fit
         and graphically assess the fit of the GPD.
+    -   The package `r pkg("ReIns")` provides a
+        function to fit the GPD distribution as well as the extended
+        Pareto distribution.    
     -   The package `r pkg("Renext")` provides various
         functions to fit and assess the GPD distribution using an
         aggregated marked POT process.
-    -   The package `r pkg("threshr")` deals with the
-        selection of thresholds using a Bayesian leave-one-out
-        cross-validation approach in order to compare the predictive
-        performance resulting from a set of thresholds.
+    -   The package `r pkg("SpatialExtremes")` provides a
+        function to fit the GPD distribution.       
+    -   The package `r pkg("SpatialExtremes")` provides different 
+        approaches for fitting/selecting the threshold in generalized 
+        Pareto distributions. Most of them are based on minimizing the 
+        AMSE-criterion or at least by reducing the bias of the assumed GPD-model.
+    -   The package `r pkg("texmex")` fit GPD models by using maximum 
+        (optionally penalised-)likelihood, or Bayesian estimation, and 
+        both classes of models may be fitted with covariates in any/all model parameters.     
+    
+        
+  --------------- ------- ----------- --------- --------- --------- ----------- ----------- ----------- --------------- -------------
+  *package*	      *fun*	  *location*	*scale*	  *shape*	  *fit*	    *argdata*   *argthres*  *outputS4*	*outputS3*      *outputS3par* 
+  ercv	          NA	    NA	        NA	      NA	      `fitpot`	`data`	    `threshold`	NA	        `coeff`	        NA
+  eva	            `gpd`	  `loc`	      `scale`	  `shape`	  `gpdFit`	`data`	    `threshold`	NA	        `par.ests`	    NA
+  evd	            `gpd`	  `loc`	      `scale`	  `shape`	  `fpot`	  `x`	        `threshold`	NA	        `estimate`	    NA
+  evir	          `gpd`	  `mu`	      `beta`	  `xi`	    `gpd`	    `data`	    `threshold`	NA	        `par.ests`	    NA
+  extraDistr	    `gpd`	  `mu`	      `sigma`	  `xi`	    NA	      NA	        NA	        NA	        NA	            NA
+  extRemes	      `evd` 	`loc`	      `scale`	  `shape`	  `fevd`	  `x`	        `threshold`	NA	        `results`	      `par`
+  fExtremes	      `gpd`	  `mu`  	    `beta`	  `xi`	    `gpdFit`	`x`	        `u`	        `fit`	      `fit`	          `par`
+  ismev	          NA	    NA	        NA	      NA	      `gpd.fit`	`xdat`	    `threshold`	NA	        `mle`	          NA
+  lmom	          `gpa`	  `xi`	      `alpha`	  `k`	      NA	      NA	        NA	        NA	        NA	            NA
+  lmomco	        `gpa`	  `xi`	      `alpha`	  `kappa`	  NA	      NA	        NA	        NA	        NA	            NA
+  mev	            NA	    NA	        `scale`	  `shape`	  `fit.gpd`	`xdat`	    `threshold`	NA	        `estimate`	    NA
+  POT	            `gpd`	  `loc`	      `scale`	  `shape`	  `fitgpd`	`data`	    `threshold`	NA	        `fitted.values` NA
+  QRM	            `GPD`	  NA	        `beta`	  `xi`	    `fit.GPD`	`data`	    `threshold`	NA	        `par.ests`	    NA
+  ReIns	          `gpd`	  `mu`  	    `sigma`	  `gamma`	  `GPDfit`	`data`	    NA	        NA	        NA	            NA
+  Renext	        `GPD`	  `loc`	      `scale`	  `shape`	  `fGPD`	  `x`	        NA	        NA	        `estimate`	    NA
+  revdbayes	      `gp`	  `loc`	      `scale`	  `shape`	  NA	      NA	        NA	        NA	        NA	            NA
+  SpatialExtremes	`gpd`	  `loc`	      `scale`	  `shape`	  `gpdmle`	`x`	        `threshold`	NA	        NA	            NA
+  tea	            `gpd`	  `loc`	      `scale`	  `shape`	  `gpdFit`	`data`	    `threshold`	NA	        `par.ests`	    NA
+  texmex	        `gpd`	  `u`	        `sigma`	  `xi`	    `evm`	    `y`	        `th`	      NA	        `coefficients`  NA
+  TLMoments	      `gpd`	  `loc`	      `scale`	  `shape`	  NA	      NA	        NA	        NA	        NA	            NA
+  --------------- ------- ----------- --------- --------- --------- ----------- ----------- ----------- --------------- -------------
+  :  Summary of GPD density functions and GPD fitting functions
+        
 
 -   ### [Extremal index estimation approach:]{#UniExtremalIndex}
 
@@ -186,6 +228,9 @@ or pull request in the GitHub repository linked above.
         univariate estimation for the block maxima and poisson point
         process approache by MLE. It also incorporates a
         non-stationarity through the parameters.
+    -   The package `r pkg("extremefit")` provides
+        modelization of exceedances over a threshold in the Pareto type
+        tail. It computes an adaptive choice of the threshold.        
     -   The package `r pkg("fExtremes")` provides univariate
         data processing and modelling. It includes extremal index
         estimation.
@@ -213,23 +258,49 @@ or pull request in the GitHub repository linked above.
     -   The package `r pkg("ismev")` provides a collection
         of functions to fit a point process with explanatory variables
         (diagnostic plot, MLE) and follows the book of Coles (2001).
-
+    -   The package `r pkg("texmex")` fit GPD models by using maximum 
+        (optionally penalised-)likelihood, or Bayesian estimation, and 
+        both classes of models may be fitted with covariates in any/all model parameters.     
 
 
 -   ### [Mixture distribution or composite distribution approach:]{#UniMixture}
 
-    -   The package `r pkg("evmix")` provides several
-        functions to fit mixture distributions: either parametric / GPD,
+    -   The package `r pkg("evmix")` provides kernel density
+        estimation and extreme value modelling. It also implements
+        mixture extreme value models and includes help on the choice of the
+        threshold within those models using MLE: either parametric / GPD,
         semi-parametric / GPD or non-parametric / GPD.
         
 -   ### [Bayesian approach:]{#UniBayesian}
 
-    -   TODO    
+    -   The package `r pkg("evdbayes")` provides the
+        Bayesian analysis of univariate extreme value models using MCMC
+        methods. It uses likelihood to estimate the parameters of the
+        GPD/GEV distributions.
+    -   The package `r pkg("revdbayes")` provides the
+        Bayesian analysis of univariate extreme value models using
+        direct random sampling from the posterior distribution, that is,
+        without using MCMC methods.    
+    -   The package `r pkg("texmex")` fit GPD models by using maximum 
+        (optionally penalised-)likelihood, or Bayesian estimation, and 
+        both classes of models may be fitted with covariates in any/all model parameters.         
+        
     
 -   ### [Threshold selection:]{#UniThreshold}
 
-    -   TODO        
-
+    -   The package `r pkg("threshr")` deals with the
+        selection of thresholds using a Bayesian leave-one-out
+        cross-validation approach in order to compare the predictive
+        performance resulting from a set of thresholds.
+    -   The package `r pkg("ercv")` provides a methodology to fit a 
+        generalized Pareto distribution, together with an automatic 
+        threshold selection algorithm.
+     -   The package `r pkg("POT")` provides multiple
+        estimators of the GPD parameters (MLE, L-Moments, method of
+        median, minimum density power divergence). L-moments diagrams
+        and from the properties of a non-homogeneous Poisson process
+        techniques are provided for the selection of the threshold.
+        
 [Bivariate Extreme Value Theory:]{#BivEVT}
 ------------------------------------------
 
