@@ -56,7 +56,8 @@ or pull request in the GitHub repository linked above.
   - [Peak-Over-Threshold by GPD approach](#BiPOT)
   - [Tail dependence coefficient approach](#MultiTailDependence)        
   - [Copula approach](#MultiCopula)
-    
+
+- [Classical graphics](#Graphics)
   
   
 
@@ -107,25 +108,26 @@ or pull request in the GitHub repository linked above.
     -   The package `r pkg("Renext")` provides various
         functions to fit the GEV distribution using an aggregated marked
         POT process.
-        
-  --------------- ------- ----------- --------- --------- --------- ----------- ----------- --------------- -------------
-  *package*	      *fun*	  *location*	*scale*	  *shape*	  *fit*	    *argdata*   *outputS4*	*outputS3*      *outputS3par*   
-  climextRemes	  NA      `location`	`scale`	  `shape`	  `fit_gev`	`y`	        NA	        `mle`	          NA
-  evd	            gev	    `loc`	      `scale`	  `shape`	  `fgev`	  `x`	        NA	        `estimate`	    NA
-  evir	          gev	    `mu`	      `sigma`	  `xi`	    `gev`	    `data`	    NA	        `par.ests`	    NA
-  extraDistr	    gev	    `mu`	      `sigma`	  `xi`	    NA	      NA	        NA	        NA	            NA  
-  extRemes	      evd	    `loc`	      `scale`	  `shape`	  `fevd`	  `x`	        NA	        `results`	      `par`
-  fExtremes	      gev	    `mu`	      `beta`	  `xi`      `gevFit`	`x` 	      `fit` 	    `par.ests`	    NA
-  ismev	          NA	    NA	        NA	       NA	      `gev.fit`	`xdat`	    NA	        `mle`	          NA
-  lmomco	        gev	    `xi`	      `alpha`	  `kappa`	  NA	      NA	        NA	        NA	            NA
-  QRM	            GEV	    `mu`	      `sigma`	  `xi`	    `fit.GEV`	`maxima`	  NA	        `par.ests`	    NA
-  revdbayes	      gev	    `loc`	      `scale`	  `shape`	  NA	      NA	        NA	        NA	            NA
-  SpatialExtremes	gev	    `loc`	      `scale`	  `shape`	  NA	      NA	        NA	        NA	            NA
-  texmex	        gev	    `mu`	      `sigma`	  `xi`  	  `evm`	    `y`	        NA	        `coefficients`	NA
-  TLMoments	      gev	    `loc`	      `scale`	  `shape`	  NA	      NA	        NA	        NA	            NA
-  --------------- ------- ----------- --------- --------- --------- ----------- ----------- --------------- -------------
-      
-  :  Summary of GEV density functions and GEV fitting functions
+
+Summary of GEV density functions and GEV fitting functions
+
+|  package	      |density function | location	  |scale	    |shape	    |fit function	      |argdata    |outputS4	  |outputS3       |outputS3par   |
+|-----------------|:--------|:------------|:----------|:----------|:----------|:---------|:-----------|:--------------|:-------------|
+| climextRemes	  |NA       |`location`	  |`scale`	  |`shape`	  |`fit_gev`	|`y`	     |NA	        |`mle`	        |NA             |
+| evd	            |`dgev`	    |`loc`	      |`scale`	  |`shape`	  |`fgev`	    |`x`	     |NA	        |`estimate`	    |NA             |
+| evir	          |`dgev`	    |`mu`	        |`sigma`	  |`xi`	      |`gev`	    |`data`	   |NA	        |`par.ests`	    |NA             |
+| extraDistr	    |`dgev`	    |`mu`	        |`sigma`	  |`xi`	      |NA	        |NA	       |NA	        |NA	            |NA             |  
+| extRemes	      |`devd`	    |`loc`	      |`scale`	  |`shape`	  |`fevd`	    |`x`	     |NA	        |`results`	    |`par`          |
+| fExtremes	      |`dgev`	    |`mu`	        |`beta`	    |`xi`       |`gevFit`	  |`x` 	     |`fit` 	    |`par.ests`	    |NA             |
+| ismev	          |NA	      |NA	          |NA	        |NA	        |`gev.fit`	|`xdat`	   |NA	        |`mle`	        |NA             |
+| lmomco	        |`pdfgev`	    |`xi`	        |`alpha`	  |`kappa`	  |NA	        |NA	        |NA	        |NA	            |NA             |
+| QRM	            |`dGEV`	    |`mu`	        |`sigma`	  |`xi`	      |`fit.GEV`	|`maxima`	  |NA	        |`par.ests`	    |NA             |
+| revdbayes	      |`dgev`	    |`loc`	      |`scale`	  |`shape`	  |NA	        |NA	        |NA	        |NA	            |NA             |
+| SpatialExtremes	|`dgev`	    |`loc`	      |`scale`	  |`shape`	  |NA	        |NA	        |NA	        |NA	            |NA             |
+| texmex	        |`dgev`	    |`mu`	        |`sigma`	  |`xi`  	    |`evm`	    |`y`	     |NA	        |`coefficients`	|NA             |
+| TLMoments	      |`dgev`	    |`loc`	      |`scale`	  |`shape`	  |NA	        |NA	        |NA	        |NA	            |NA             |
+
+  :  
 
 
 -   ### [Peak-Over-Threshold by GPD approach:]{#UniPOT}
@@ -189,31 +191,32 @@ or pull request in the GitHub repository linked above.
         (optionally penalised-)likelihood, or Bayesian estimation, and 
         both classes of models may be fitted with covariates in any/all model parameters.     
     
-        
-  --------------- ------- ----------- --------- --------- --------- ----------- ----------- ----------- --------------- -------------
-  *package*	      *fun*	  *location*	*scale*	  *shape*	  *fit*	    *argdata*   *argthres*  *outputS4*	*outputS3*      *outputS3par* 
-  ercv	          NA	    NA	        NA	      NA	      `fitpot`	`data`	    `threshold`	NA	        `coeff`	        NA
-  eva	            `gpd`	  `loc`	      `scale`	  `shape`	  `gpdFit`	`data`	    `threshold`	NA	        `par.ests`	    NA
-  evd	            `gpd`	  `loc`	      `scale`	  `shape`	  `fpot`	  `x`	        `threshold`	NA	        `estimate`	    NA
-  evir	          `gpd`	  `mu`	      `beta`	  `xi`	    `gpd`	    `data`	    `threshold`	NA	        `par.ests`	    NA
-  extraDistr	    `gpd`	  `mu`	      `sigma`	  `xi`	    NA	      NA	        NA	        NA	        NA	            NA
-  extRemes	      `evd` 	`loc`	      `scale`	  `shape`	  `fevd`	  `x`	        `threshold`	NA	        `results`	      `par`
-  fExtremes	      `gpd`	  `mu`  	    `beta`	  `xi`	    `gpdFit`	`x`	        `u`	        `fit`	      `fit`	          `par`
-  ismev	          NA	    NA	        NA	      NA	      `gpd.fit`	`xdat`	    `threshold`	NA	        `mle`	          NA
-  lmom	          `gpa`	  `xi`	      `alpha`	  `k`	      NA	      NA	        NA	        NA	        NA	            NA
-  lmomco	        `gpa`	  `xi`	      `alpha`	  `kappa`	  NA	      NA	        NA	        NA	        NA	            NA
-  mev	            NA	    NA	        `scale`	  `shape`	  `fit.gpd`	`xdat`	    `threshold`	NA	        `estimate`	    NA
-  POT	            `gpd`	  `loc`	      `scale`	  `shape`	  `fitgpd`	`data`	    `threshold`	NA	        `fitted.values` NA
-  QRM	            `GPD`	  NA	        `beta`	  `xi`	    `fit.GPD`	`data`	    `threshold`	NA	        `par.ests`	    NA
-  ReIns	          `gpd`	  `mu`  	    `sigma`	  `gamma`	  `GPDfit`	`data`	    NA	        NA	        NA	            NA
-  Renext	        `GPD`	  `loc`	      `scale`	  `shape`	  `fGPD`	  `x`	        NA	        NA	        `estimate`	    NA
-  revdbayes	      `gp`	  `loc`	      `scale`	  `shape`	  NA	      NA	        NA	        NA	        NA	            NA
-  SpatialExtremes	`gpd`	  `loc`	      `scale`	  `shape`	  `gpdmle`	`x`	        `threshold`	NA	        NA	            NA
-  tea	            `gpd`	  `loc`	      `scale`	  `shape`	  `gpdFit`	`data`	    `threshold`	NA	        `par.ests`	    NA
-  texmex	        `gpd`	  `u`	        `sigma`	  `xi`	    `evm`	    `y`	        `th`	      NA	        `coefficients`  NA
-  TLMoments	      `gpd`	  `loc`	      `scale`	  `shape`	  NA	      NA	        NA	        NA	        NA	            NA
-  --------------- ------- ----------- --------- --------- --------- ----------- ----------- ----------- --------------- -------------
-  :  Summary of GPD density functions and GPD fitting functions
+    
+Summary of GPD density functions and GPD fitting functions
+
+|package	        |density function | location  |scale|shape	  |fit function |argdata    | argthres    |outputS4	  |outputS3       |outputS3par   |
+|-----------------|:--------|:---------|:----------|:-----------|:------------|:----------|:------------|:----------|:--------------|:--------------|
+| ercv	          |NA	      |NA	        |NA	        |NA	        |`fitpot`	    |`data`	    |`threshold`	|NA	        |`coeff`	      |NA           |
+| eva	            |`dgpd`	  |`loc`	    |`scale`	  |`shape`	  |`gpdFit`	    |`data`	    |`threshold`	|NA	        |`par.ests`	    |NA           |
+| evd	           | `dgpd`	  |`loc`	    |`scale`	  |`shape`	  |`fpot`	      |`x`	      |`threshold`	|NA	        |`estimate`	    |NA           |
+| evir	          |`dgpd`	  |`mu`	      |`beta`	    |`xi`	      |`gpd`	      |`data`	    |`threshold`	|NA	        |`par.ests`	    |NA           |
+| extraDistr	    |`dgpd`	  |`mu`	      |`sigma`	  |`xi`	      |NA	          |NA	        |NA	          |NA	        |NA	            |NA           |
+| extRemes	      |`devd` 	|`loc`	    |`scale`	  |`shape`	  |`fevd`	      |`x`	      |`threshold`	|NA	        |`results`	    |`par`           |
+| fExtremes	      |`dgpd`	  |`mu`  	    |`beta`	    |`xi`	      |`gpdFit`	    |`x`	      |`u`	        |`fit`	    |`fit`	        |`par`           |
+| ismev	          |NA	      |NA	        |NA	        |NA	        |`gpd.fit`	  |`xdat`	    |`threshold`	|NA	        |`mle`	         |NA           |
+| lmomco	        |`pdfgpa`	|`xi`	      |`alpha`	  |`kappa`	  |NA	          |NA	        |NA	          |NA	        |NA	            |NA           |
+| mev	            |NA	      |NA	        |`scale`	  |`shape`	  |`fit.gpd`	  |`xdat`	    |`threshold`	|NA	        |`estimate`	    |NA           |
+| POT	            |`dgpd`	  |`loc`	    |`scale`	  |`shape`	  |`fitgpd`	    |`data`	    |`threshold`	|NA	        |`fitted.values`|NA           |
+| QRM	            |`dGPD`	  |NA	        |`beta`	    |`xi`	      |`fit.GPD`	  |`data`	    |`threshold`	|NA	        |`par.ests`	    |NA           |
+| ReIns	          |`dgpd`	  |`mu`  	    |`sigma`	  |`gamma`	  |`GPDfit`	    |`data`	    |NA	          |NA	        |NA	            |NA           |
+| Renext	        |`dGPD`	  |`loc`	    |`scale`	  |`shape`	  |`fGPD`	      |`x`	      |NA	          |NA	        |`estimate`	    |NA           |
+| revdbayes	      |`dgp`	  |`loc`	    |`scale`	  |`shape`	   | NA	        |NA	        |NA	          |NA	        |NA	            |NA           |
+| SpatialExtremes	|`dgpd`	  |`loc`	    |`scale`	  |`shape`	  |`gpdmle`	    |`x`	      |`threshold`	|NA	        |NA	            |NA           |
+| tea	            |`dgpd`	  |`loc`	    |`scale`	  |`shape`	  |`gpdFit`	    |`data`	    |`threshold`	|NA	        |`par.ests`	    |NA           |
+| texmex	        |`dgpd`	  |`u`	      |`sigma`	  |`xi`	      |`evm`	      |`y`	       |`th`	      |NA	        |`coefficients`  |NA           |
+| TLMoments	      |`dgpd`	  |`loc`	    |`scale`	  |`shape`	   | NA	        |NA	        |NA	          |NA	        |NA	            |NA           |
+ 
+    
         
 
 -   ### [Extremal index estimation approach:]{#UniExtremalIndex}
@@ -230,7 +233,14 @@ or pull request in the GitHub repository linked above.
         non-stationarity through the parameters.
     -   The package `r pkg("extremefit")` provides
         modelization of exceedances over a threshold in the Pareto type
-        tail. It computes an adaptive choice of the threshold.        
+        tail. It computes an adaptive choice of the threshold.  
+    -   The package `r pkg("ExtremeRisks")` provides risk measures
+        such as Expectile, Value-at-Risk, for univariate independent 
+        observations and temporal dependent observations. 
+        The statistical inference is performed through parametric 
+        and non-parametric estimators. 
+        Inferential procedures such as confidence intervals, confidence 
+        regions and hypothesis testing are obtained by exploiting the asymptotic theory.     
     -   The package `r pkg("fExtremes")` provides univariate
         data processing and modelling. It includes extremal index
         estimation.
@@ -277,6 +287,10 @@ or pull request in the GitHub repository linked above.
         Bayesian analysis of univariate extreme value models using MCMC
         methods. It uses likelihood to estimate the parameters of the
         GPD/GEV distributions.
+    -   The package `r pkg("extRemes")` also provides bayesian estimation.    
+    -   The package `r pkg("MCMC4Extremes")` proposes some functions 
+        to perform posterior estimation for some distribution, with an
+        emphasis to extreme value distributions.
     -   The package `r pkg("revdbayes")` provides the
         Bayesian analysis of univariate extreme value models using
         direct random sampling from the posterior distribution, that is,
@@ -284,7 +298,18 @@ or pull request in the GitHub repository linked above.
     -   The package `r pkg("texmex")` fit GPD models by using maximum 
         (optionally penalised-)likelihood, or Bayesian estimation, and 
         both classes of models may be fitted with covariates in any/all model parameters.         
+    
+|package        | function      | models[^1]  | covariates  | sampling[^2]  | prior choice  | generic functions |
+|:--------------|:--------------|:------------|:------------|:--------------|:--------------|:------------------|
+|`evdbayes`     | `posterior`   | 1--4        | loc./thresh | RWMH          | multiple      |                     |
+|`extRemes`     | `fevd`        | 1--4,*      | all         | RWMH          | custom        | plot, summary       |
+|`MCMC4Extremes`|`ggev`,`gpdp`  | 1--2,*      | no          | RWMH          | fixed         | plot, summary       |
+|`revdbayes`    | `rpost`       | 1--4        | no          | RU            | custom        | plot, summary       |
+|`texmex`       | `evm`         | 1--2,*      | all         | IMH           | gaussian      | plot, summary, density,correlogram|
         
+[^1]model family: generalized extreme value distribution (1), generalized Pareto distribution (2), inhomogeneous Poisson process (3), order statistics/r-largest (4) or custom/other (*).    
+
+[^2]sampling: random walk Metropolis--Hastings (RWMH), exact sampling ratio-of-uniform (RU), independent Metropolis--Hastings (IMH) 
     
 -   ### [Threshold selection:]{#UniThreshold}
 
@@ -353,8 +378,12 @@ or pull request in the GitHub repository linked above.
     -   The package `r pkg("lmomco")` also implements
         L-moments multivariate analysis for GPD distributions.
         
--   ### [Tail dependence coefficient approach:]{#MultiTailDependence}        
+-   ### [Tail dependence coefficient approach:]{#MultiTailDependence}  
+
     -   TODO
+    -   The package `r pkg("ExtremeRisks")` provides risk measures
+        such as Expectile, Value-at-Risk, for multivariate independent 
+        marginals.
 
 -   ### [Copula approach:]{#MultiCopula}
 
@@ -369,46 +398,48 @@ or pull request in the GitHub repository linked above.
 --------------------------------
 
 
+Graphics for univariate extreme value analysis
+  
+|Graphic name               |Packages       |Function names                       |
+|---------------------------|:--------------|:------------------------------------|
+|Dispersion index plot       |POT           |`diplot`                       |
+|Distribution fitting plot   |extremeStat   |`distLplot`                       |
+|Hill plot                   |evir          |`hill`                         |
+|Hill plot                   |evmix         |`hillplot`                       |
+|Hill plot                   |extremefit    |`hill`                         |
+|Hill plot                   |QRM           |`hillPlot`                       |
+|Hill plot                   |ReIns         |`Hill`                         |
+|Hill plot                   |ExtremeRisks  |`HTailIndex`                         |
+|L-moment plot               |POT           |`lmomplot`                       |
+|Mean residual life plot     |POT           |`mrlplot`                       |
+|Mean residual life plot     |evd           |`mrlplot`                       |
+|Mean residual life plot     |evir          |`meplot`                       |
+|Mean residual life plot     |evmix         |`mrlplot`                       |
+|Mean residual life plot     |ismev         |`mrl.plot`                       |
+|Mean residual life plot     |QRM           |`MEplot`                       |
+|Mean residual life plot     |ReIns         |`MeanExcess`                     |
+|Pickand's plot              |evmix         |`pickandsplot`                   |
+|QQ Pareto plot              |POT           |`qplot`                        |
+|QQ Pareto plot              |RTDE          |`qqparetoplot`                   |
+|QQ Pareto plot              |QRM           |`plotFittedGPDvsEmpiricalExcesses`   |
+|QQ Pareto plot              |ReIns         |`ParetoQQ`                       |
+|QQ Exponential plot         |QRM           |`QQplot`                       |
+|QQ Exponential plot         |ReIns         |`ExpQQ`                        |
+|QQ Exponential plot         |Renext        |`expplot`                       |
+|QQ Lognormal plot           |ReIns         |`LognormalQQ`                   |
+|QQ Weibull plot             |ReIns         |`WeibullQQ`                     |
+|QQ Weibull plot             |Renext        |`weibplot`                     |
+|Risk measure plot           |QRM           |`RMplot`                       |
+|Threshold choice plot       |evd           |`tcplot`                       |
+|Threshold choice plot       |evmix         |`tcplot`                       |
+|Threshold choice plot       |POT           |`tcplot`                       |
+|Threshold choice plot       |QRM           |`xiplot`                       |
+|Return level plot           |POT           |`retlev`                       |
+|Return level plot           |POT           |`Return`                       |
+|Return level plot           |Renext        |`plot,lines`                       |
 
-  --------------------------- ------------- ------------------------------------
-  *Graphic name*              *Packages*    *Function names*
-  Dispersion index plot       POT           `diplot`
-  Distribution fitting plot   extremeStat   `distLplot`
-  Hill plot                   evir          `hill`
-  Hill plot                   evmix         `hillplot`
-  Hill plot                   extremefit    `hill`
-  Hill plot                   QRM           `hillPlot`
-  Hill plot                   ReIns         `Hill`
-  L-moment plot               POT           `lmomplot`
-  Mean residual life plot     POT           `mrlplot`
-  Mean residual life plot     evd           `mrlplot`
-  Mean residual life plot     evir          `meplot`
-  Mean residual life plot     evmix         `mrlplot`
-  Mean residual life plot     ismev         `mrl.plot`
-  Mean residual life plot     QRM           `MEplot`
-  Mean residual life plot     ReIns         `MeanExcess`
-  Pickand's plot              evmix         `pickandsplot`
-  QQ Pareto plot              POT           `qplot`
-  QQ Pareto plot              RTDE          `qqparetoplot`
-  QQ Pareto plot              QRM           `plotFittedGPDvsEmpiricalExcesses`
-  QQ Pareto plot              ReIns         `ParetoQQ`
-  QQ Exponential plot         QRM           `QQplot`
-  QQ Exponential plot         ReIns         `ExpQQ`
-  QQ Exponential plot         Renext        `expplot`
-  QQ Lognormal plot           ReIns         `LognormalQQ`
-  QQ Weibull plot             ReIns         `WeibullQQ`
-  QQ Weibull plot             Renext        `weibplot`
-  Risk measure plot           QRM           `RMplot`
-  Threshold choice plot       evd           `tcplot`
-  Threshold choice plot       evmix         `tcplot`
-  Threshold choice plot       POT           `tcplot`
-  Threshold choice plot       QRM           `xiplot`
-  Return level plot           POT           `retlev`
-  Return level plot           POT           `Return`
-  Return level plot           Renext        `plot,lines`
-  --------------------------- ------------- ------------------------------------
 
-  :  Graphics for univariate extreme value analysis
+  
 
 
 
@@ -424,7 +455,7 @@ Graphics for multivariate extreme value analysis
 | Extremal index plot                           | `evd`   | `exiplot`    |
 | Pickands' dependence function plot            | `POT`   | `pickdep`    |
 | Spectral density plot                         | `POT`   | `specdens`   |
-
+| Multidimensional Hill plot                   |  `ExtremeRisks`|`MultiHTailIndex`|
 
 
 [Classical books and review papers:]{#References}
