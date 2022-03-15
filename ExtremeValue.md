@@ -412,19 +412,18 @@ or pull request in the GitHub repository linked above.
 
 
 
+Graphics for multivariate extreme value analysis
 
-  ----------------------------------------------- ----- --------------
-  Bivariate threshold choice plot                 evd   `bvtcplot`
-  Dependence measure (chi) plot                   POT   `chimeas`
-  Dependence measure (chi) plot                   evd   `chiplot`
-  Dependence diagnostic plot within time series   POT   `tsdep.plot`
-  Extremal index plot                             POT   `exiplot`
-  Extremal index plot                             evd   `exiplot`
-  Pickands' dependence function plot             POT   `pickdep`
-  Spectral density plot                           POT   `specdens`
-  ----------------------------------------------- ----- --------------
-
-  :  Graphics for multivariate extreme value analysis
+| Graphic                                       | Package | Function     |
+|:----------------------------------------------|:--------|:-------------|
+| Bivariate threshold choice plot               | `evd`   | `bvtcplot`   |
+| Dependence measure (chi) plot                 | `POT`   | `chimeas`    |
+| Dependence measure (chi) plot                 | `evd`   | `chiplot`    |
+| Dependence diagnostic plot within time series | `POT`   | `tsdep.plot` |
+| Extremal index plot                           | `POT`   | `exiplot`    |
+| Extremal index plot                           | `evd`   | `exiplot`    |
+| Pickands' dependence function plot            | `POT`   | `pickdep`    |
+| Spectral density plot                         | `POT`   | `specdens`   |
 
 
 
