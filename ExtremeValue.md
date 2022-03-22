@@ -52,10 +52,12 @@ or pull request in the GitHub repository linked above.
   - [Copula approach](#BiCopula)
 
 - [Multivariate Extreme Value Theory](#MultiEVT) 
-  - [Block Maxima approach](#MultiBlockMaxima)
+  - [Multivariate Maxima](#MultiMaxima)
   - [Peak-Over-Threshold by GPD approach](#BiPOT)
   - [Tail dependence coefficient approach](#MultiTailDependence)        
   - [Copula approach](#MultiCopula)
+  - [Bayesian approach](#MultiBayesian)
+  - [Statistical tests](#MultiTests)
 
 - [Classical graphics](#Graphics)
   
@@ -108,6 +110,9 @@ or pull request in the GitHub repository linked above.
     -   The package `r pkg("Renext")` provides various
         functions to fit the GEV distribution using an aggregated marked
         POT process.
+    -   The package `r pkg("CompRandFld")` provides a function
+        to fit a GEV distribution based on maximum likelihood,
+        moment matching.
 
 Summary of GEV density functions and GEV fitting functions
 
@@ -349,7 +354,7 @@ Summary of GPD density functions and GPD fitting functions
         choice of the threshold depending of the covariate.
     -   The package `r pkg("POT")` provides estimators of
         the GPD parameters in the bivariate case.
-
+    
 -   ### [Tail dependence coefficient approach:]{#BiTailDependence}
 
     -   The package `r pkg("RTDE")` implements bivariate
@@ -361,38 +366,82 @@ Summary of GPD density functions and GPD fitting functions
         exploring and modelling a wide range of commonly used copulas,
         see also the `r view("Distributions")` task view
         (copula section).        
+    -   The pacage `r pkg("fCopulae")` provides utilities to fit
+        bivariate extreme copulas.
 
 [Multivariate Extreme Value Theory:]{#MultiEVT}
 -----------------------------------------------
 
--   ### [Block Maxima approach:]{#MultiBlockMaxima}
+-   ### [Multivariate Maxima:]{#MultiMaxima}
 
     -   The package `r pkg("lmomco")` is similar to the
         `r pkg("lmom")` but also implements recent advances
         in L-moments estimation, including L-moments for censored data,
         trimmed L-moments and L-moment for multivariate analysis for GEV
         distributions.
+    -   The package `r pkg("SpatialExtremes")` provides functions
+        to fit max-stable processes to data using pairwise likelihood
+        or spatial GEV models possibly with covariates.
+    -   The package `r pkg("CompRandFld")` has methods for 
+        fitting max-stable processes using pairwise 
+        composite likelihood for spatial models.    
+    -   A set of procedures for modelling parametrically 
+        and non-parametrically the dependence structure of 
+        multivariate extreme-values is provided in `r pkg("ExtremalDep")`.
 
 -   ### [Peak-Over-Threshold by GPD approach:]{#MultiPOT}
 
     -   The package `r pkg("lmomco")` also implements
         L-moments multivariate analysis for GPD distributions.
+    -   The package `r pkg("graphicalExtremes")` develops a     
+        statistical methodology for sparse multivariate extreme 
+        value models. Methods are provided for exact simulation 
+        and statistical inference for multivariate Pareto 
+        distributions on graphical structures.
+    
         
 -   ### [Tail dependence coefficient approach:]{#MultiTailDependence}  
 
-    -   TODO
+    -   The package `r pkg("SpatialExtremes")` provides functions
+        to estimate non parametrically the extremal coefficient function
+         as well as model checking and selection.
     -   The package `r pkg("ExtremeRisks")` provides risk measures
         such as Expectile, Value-at-Risk, for multivariate independent 
         marginals.
+    -   The package `r pkg("tailDepFun")` provides functions 
+        implementing minimal distance estimation methods for 
+        parametric tail dependence models.
 
 -   ### [Copula approach:]{#MultiCopula}
 
+    -   The package `r pkg("SpatialExtremes")` provides functions
+        to estimate a copula-based model to spatial extremes as well
+        as model checking and selection.
     -   The package `r pkg("copula")` provides utilities for
         exploring and modelling a wide range of commonly used copulas.
         Extreme value copulas and non-parametric estimates of extreme
         value copulas are implemented. See also the
         `r view("Distributions")` task view (copula
         section).
+    -   The package `r pkg("SimCop")` has functionalities 
+        for simulation of some bivariate extreme value 
+        distributions and the multivariate logistic model, 
+        or Gumbel copula.
+
+-   ### [Bayesian approach:]{#MultiBayesian}
+
+    -   The package `r pkg("SpatialExtremes")` provides 
+        tools for the statistical modelling of spatial extremes 
+        using Bayesian hierarchical models (fitting, checking,
+        selection).
+    -   The package `r pkg("ExtremalDep")` also provides function to fit 
+        a multivariate extreme value using Bayesian inference.
+    
+-   ### [Statistical tests:]{#MultiTests}
+
+    -   The `r pkg("copula")` package includes three tests 
+        of max-stability assumption.
+        
 
 [Classical graphics:]{#Graphics}
 --------------------------------
