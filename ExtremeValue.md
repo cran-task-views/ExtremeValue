@@ -3,7 +3,7 @@ name: ExtremeValue
 topic: Extreme Value Analysis
 maintainer: Christophe Dutang
 email: Christophe.Dutang@ensimag.fr
-version: 2022-03-14
+version: 2022-03-23
 source: https://github.com/cran-task-views/ExtremeValue/
 ---
 
@@ -46,7 +46,7 @@ or pull request in the GitHub repository linked above.
   - [Threshold selection](#UniThreshold)
 
 - [Bivariate Extreme Value Theory](#BivEVT) 
-  - [Block Maxima approach](#BiBlockMaxima)
+  - [Maxima approach](#BiMaxima)
   - [Peak-Over-Threshold by GPD approach](#BiPOT)
   - [Tail dependence coefficient approach](#BiTailDependence)
   - [Copula approach](#BiCopula)
@@ -334,13 +334,16 @@ Summary of GPD density functions and GPD fitting functions
 [Bivariate Extreme Value Theory:]{#BivEVT}
 ------------------------------------------
 
--   ### [Block Maxima approach:]{#BiBlockMaxima}
+-   ### [Maxima approach:]{#BiMaxima}
 
     -   The package `r pkg("evd")` provides functions for
         multivariate distributions. Modelling function allow estimation
         of parameters for class of bivariate extreme value
         distributions. Both parametric and non-parametric estimation of
         bivariate EVD can be performed.
+    -   Nonparametric estimation of the spectral measure 
+        using a sample of pseudo-angles is available in the package 
+        `r pkg("extremis")` in the bivariate setting.    
 
 -   ### [Peak-Over-Threshold by GPD approach:]{#BiPOT}
 
@@ -388,6 +391,10 @@ Summary of GPD density functions and GPD fitting functions
     -   A set of procedures for modelling parametrically 
         and non-parametrically the dependence structure of 
         multivariate extreme-values is provided in `r pkg("ExtremalDep")`.
+    -   The `r pkg("BMAmevt")` package implements a Bayesian
+        nonparametric model that uses a trans-dimensional Metropolis algorithm 
+        for fitting a Dirichlet mixture to the spectral measure 
+        based on pseudo-angles.
 
 -   ### [Peak-Over-Threshold by GPD approach:]{#MultiPOT}
 
@@ -496,15 +503,28 @@ Graphics for multivariate extreme value analysis
 
 | Graphic                                       | Package | Function     |
 |:----------------------------------------------|:--------|:-------------|
+| Angular densities plot                        | `ExtremalDep`   | `AngDensPlot`   |
 | Bivariate threshold choice plot               | `evd`   | `bvtcplot`   |
 | Dependence measure (chi) plot                 | `POT`   | `chimeas`    |
 | Dependence measure (chi) plot                 | `evd`   | `chiplot`    |
 | Dependence diagnostic plot within time series | `POT`   | `tsdep.plot` |
 | Extremal index plot                           | `POT`   | `exiplot`    |
 | Extremal index plot                           | `evd`   | `exiplot`    |
+| (2D)map for a max-stable process              | `SpatialExtremes`|`map`|
+| madogram for a max-stable process             | `SpatialExtremes`|`madogram`|
+| madogram for a max-stable process             | `ExtremalDep`|`madogram`|
+| F-madogram for a max-stable process           | `SpatialExtremes`|`fmadogram`|
+| lambda-madogram for a max-stable process      | `SpatialExtremes`|`lmadogram`|
+| Multidimensional Hill plot                    | `ExtremeRisks`|`MultiHTailIndex`|
 | Pickands' dependence function plot            | `POT`   | `pickdep`    |
+| Pickands' dependence function plot            | `ExtremalDep`   | `bbeed`    |
+| QQ-plot for the extremal coefficient          | `SpatialExtremes`|`qqextcoeff`|
 | Spectral density plot                         | `POT`   | `specdens`   |
-| Multidimensional Hill plot                   |  `ExtremeRisks`|`MultiHTailIndex`|
+| variogram for a max-stable fields             | `CompRandFld`|`EVariogram`|
+
+
+
+
 
 
 [Classical books and review papers:]{#References}
