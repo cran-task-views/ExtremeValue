@@ -3,7 +3,7 @@ name: ExtremeValue
 topic: Extreme Value Analysis
 maintainer: Christophe Dutang
 email: Christophe.Dutang@ensimag.fr
-version: 2022-03-23
+version: 2022-08-04
 source: https://github.com/cran-task-views/ExtremeValue/
 ---
 
@@ -110,9 +110,7 @@ or pull request in the GitHub repository linked above.
     -   The package `r pkg("Renext")` provides various
         functions to fit the GEV distribution using an aggregated marked
         POT process.
-    -   The package `r pkg("CompRandFld")` provides a function
-        to fit a GEV distribution based on maximum likelihood,
-        moment matching.
+
 
 Summary of GEV density functions and GEV fitting functions
 
@@ -228,8 +226,6 @@ Summary of GPD density functions and GPD fitting functions
 
     -   The package `r pkg("evd")` implements univariate
         estimation for extremal index estimation approach.
-    -   The package `r pkg("evdbayes")` includes point
-        process characterisation
     -   the package `r pkg("evir")` includes extremal index
         estimation.
     -   The package `r pkg("extRemes")` also provides EVDs
@@ -260,12 +256,14 @@ Summary of GPD density functions and GPD fitting functions
     -   The package `r pkg("ptsuite")` implements various
         estimation methods for the shape parameter of Pareto distributed
         data.
+    -   The package `r pkg("evgam")` implements a moment-based estimator
+        of extremal index based on Ferro and Segers (2003).
 
 -   ### [Regression models:]{#UniRegression}
 
     -   The package `r pkg("VGAM")` offers additive
         modelling for extreme value analysis. The estimation for vector
-        generalised additive models is performed using a backfitting
+        generalised additive models (GAM) is performed using a backfitting
         algorithm and employs a penalized likelihood for the smoothing
         splines. It is the only package known to the authors that
         performs additive modelling for a range of extreme value
@@ -275,7 +273,10 @@ Summary of GPD density functions and GPD fitting functions
         (diagnostic plot, MLE) and follows the book of Coles (2001).
     -   The package `r pkg("texmex")` fit GPD models by using maximum 
         (optionally penalised-)likelihood, or Bayesian estimation, and 
-        both classes of models may be fitted with covariates in any/all model parameters.     
+        both classes of models may be fitted with covariates in any/all model parameters.    
+    -   The package `r pkg("evgam")` provides methods for fitting various 
+        extreme value distributions with parameters of generalised additive 
+        model (GAM) form. 
 
 
 -   ### [Mixture distribution or composite distribution approach:]{#UniMixture}
@@ -288,10 +289,6 @@ Summary of GPD density functions and GPD fitting functions
         
 -   ### [Bayesian approach:]{#UniBayesian}
 
-    -   The package `r pkg("evdbayes")` provides the
-        Bayesian analysis of univariate extreme value models using MCMC
-        methods. It uses likelihood to estimate the parameters of the
-        GPD/GEV distributions.
     -   The package `r pkg("extRemes")` also provides bayesian estimation.    
     -   The package `r pkg("MCMC4Extremes")` proposes some functions 
         to perform posterior estimation for some distribution, with an
@@ -306,7 +303,6 @@ Summary of GPD density functions and GPD fitting functions
     
 |package        | function      | models[^1]  | covariates  | sampling[^2]  | prior choice  | generic functions |
 |:--------------|:--------------|:------------|:------------|:--------------|:--------------|:------------------|
-|`evdbayes`     | `posterior`   | 1--4        | loc./thresh | RWMH          | multiple      |                     |
 |`extRemes`     | `fevd`        | 1--4,*      | all         | RWMH          | custom        | plot, summary       |
 |`MCMC4Extremes`|`ggev`,`gpdp`  | 1--2,*      | no          | RWMH          | fixed         | plot, summary       |
 |`revdbayes`    | `rpost`       | 1--4        | no          | RU            | custom        | plot, summary       |
@@ -385,9 +381,6 @@ Summary of GPD density functions and GPD fitting functions
     -   The package `r pkg("SpatialExtremes")` provides functions
         to fit max-stable processes to data using pairwise likelihood
         or spatial GEV models possibly with covariates.
-    -   The package `r pkg("CompRandFld")` has methods for 
-        fitting max-stable processes using pairwise 
-        composite likelihood for spatial models.    
     -   A set of procedures for modelling parametrically 
         and non-parametrically the dependence structure of 
         multivariate extreme-values is provided in `r pkg("ExtremalDep")`.
@@ -520,7 +513,7 @@ Graphics for multivariate extreme value analysis
 | Pickands' dependence function plot            | `ExtremalDep`   | `bbeed`    |
 | QQ-plot for the extremal coefficient          | `SpatialExtremes`|`qqextcoeff`|
 | Spectral density plot                         | `POT`   | `specdens`   |
-| variogram for a max-stable fields             | `CompRandFld`|`EVariogram`|
+
 
 
 
