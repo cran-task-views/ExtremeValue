@@ -3,7 +3,7 @@ name: ExtremeValue
 topic: Extreme Value Analysis
 maintainer: Christophe Dutang
 email: Christophe.Dutang@ensimag.fr
-version: 2022-08-04
+version: 2022-12-28
 source: https://github.com/cran-task-views/ExtremeValue/
 ---
 
@@ -65,6 +65,22 @@ or pull request in the GitHub repository linked above.
 
 [Univariate Extreme Value Theory:]{#UnivEVT}
 --------------------------------------------
+
+Several packages export the probability functions (quantile, density,
+distribution and random generation) for the Generalized Pareto and the 
+Generalized Extreme Value distributions, often sticking to the 
+classical prefixing rule (with prefixes `"q"`, `"d"`, `"p"`, `"r"`) 
+and allowing the use of the formals such as `log` and `lower tail`, 
+see the [Distributions](https://cran.r-project.org/view=Distributions) 
+task view for details. 
+Several strategies can be used for the numeric evaluation of these 
+functions in the small shape (near exponential) case.  
+Also, some implementations allow the use of parameters in 
+vectorized form and some can provide the derivatives w.r.t. the parameters.
+Nevertheless, the `r pkg("nieve")` package provides symbolic
+differentiation for two EVT probability distribution (GPD and GEV) 
+in order to compute the log-likelihood. A great care is done to handle
+the near-exponential case.
 
 -   ### [Block Maxima approach:]{#UniBlockMaxima}
 
