@@ -53,11 +53,11 @@ or pull request in the GitHub repository linked above.
   - [Tail dependence coefficient approach](#BiTailDependence)
   
 - [Multivariate Extreme Value Theory](#MultiEVT) 
+  - [Bayesian approach](#MultiBayesian)
+  - [Copula approach](#MultiCopula)
   - [Multivariate Maxima](#MultiMaxima)
   - [Peak-Over-Threshold by GPD approach](#BiPOT)
   - [Tail dependence coefficient approach](#MultiTailDependence)        
-  - [Copula approach](#MultiCopula)
-  - [Bayesian approach](#MultiBayesian)
   - [Statistical tests](#MultiTests)
 
 - [Classical graphics](#Graphics)
@@ -82,6 +82,31 @@ Nevertheless, the `r pkg("nieve")` package provides symbolic
 differentiation for two EVT probability distribution (GPD and GEV) 
 in order to compute the log-likelihood. A great care is done to handle
 the near-exponential case.
+
+-   ### [Bayesian approach:]{#UniBayesian}
+
+    -   The package `r pkg("extRemes")` also provides bayesian estimation.    
+    -   The package `r pkg("MCMC4Extremes")` proposes some functions 
+        to perform posterior estimation for some distribution, with an
+        emphasis to extreme value distributions.
+    -   The package `r pkg("revdbayes")` provides the
+        Bayesian analysis of univariate extreme value models using
+        direct random sampling from the posterior distribution, that is,
+        without using MCMC methods.    
+    -   The package `r pkg("texmex")` fit GPD models by using maximum 
+        (optionally penalised-)likelihood, or Bayesian estimation, and 
+        both classes of models may be fitted with covariates in any/all model parameters.         
+    
+|package        | function      | models[^1]  | covariates  | sampling[^2]  | prior choice  | generic functions |
+|:--------------|:--------------|:------------|:------------|:--------------|:--------------|:------------------|
+|`extRemes`     | `fevd`        | 1--4,*      | all         | RWMH          | custom        | plot, summary       |
+|`MCMC4Extremes`|`ggev`,`gpdp`  | 1--2,*      | no          | RWMH          | fixed         | plot, summary       |
+|`revdbayes`    | `rpost`       | 1--4        | no          | RU            | custom        | plot, summary       |
+|`texmex`       | `evm`         | 1--2,*      | all         | IMH           | gaussian      | plot, summary, density,correlogram|
+        
+[^1] model family: generalized extreme value distribution (1), generalized Pareto distribution (2), inhomogeneous Poisson process (3), order statistics/r-largest (4) or custom/other (*).    
+
+[^2] sampling: random walk Metropolis--Hastings (RWMH), exact sampling ratio-of-uniform (RU), independent Metropolis--Hastings (IMH) 
 
 -   ### [Block Maxima approach:]{#UniBlockMaxima}
 
@@ -147,8 +172,53 @@ Summary of GEV density functions and GEV fitting functions
 | texmex	        |`dgev`	    |`mu`	        |`sigma`	  |`xi`  	    |`evm`	    |`y`	     |NA	        |`coefficients`	|NA             |
 | TLMoments	      |`dgev`	    |`loc`	      |`scale`	  |`shape`	  |NA	        |NA	        |NA	        |NA	            |NA             |
 
-  :  
 
+-   ### [Extremal index estimation approach:]{#UniExtremalIndex}
+
+    -   The package `r pkg("evd")` implements univariate
+        estimation for extremal index estimation approach.
+    -   the package `r pkg("evir")` includes extremal index
+        estimation.
+    -   The package `r pkg("extRemes")` also provides EVDs
+        univariate estimation for the block maxima and poisson point
+        process approache by MLE. It also incorporates a
+        non-stationarity through the parameters.
+    -   The package `r pkg("extremefit")` provides
+        modelization of exceedances over a threshold in the Pareto type
+        tail. It computes an adaptive choice of the threshold.  
+    -   The package `r pkg("ExtremeRisks")` provides risk measures
+        such as Expectile, Value-at-Risk, for univariate independent 
+        observations and temporal dependent observations. 
+        The statistical inference is performed through parametric 
+        and non-parametric estimators. 
+        Inferential procedures such as confidence intervals, confidence 
+        regions and hypothesis testing are obtained by exploiting the asymptotic theory.     
+    -   The package `r pkg("fExtremes")` provides univariate
+        data processing and modelling. It includes extremal index
+        estimation.
+    -   The package `r pkg("mev")` provides extremal index
+        estimators based on interexceedance time (MLE and iteratively
+        reweigthed least square estimators of Suveges (2007)). It
+        provides the information matrix test statistic proposed by
+        Suveges and Davison (2010) and MLE for the extremal index.
+    -   The package `r pkg("ReIns")` provides functions for
+        extremal index and splicing approaches in a reinsurance
+        perspective.
+    -   The package `r pkg("ptsuite")` implements various
+        estimation methods for the shape parameter of Pareto distributed
+        data.
+    -   The package `r pkg("evgam")` implements a moment-based estimator
+        of extremal index based on Ferro and Segers (2003).
+
+
+-   ### [Mixture distribution or composite distribution approach:]{#UniMixture}
+
+    -   The package `r pkg("evmix")` provides kernel density
+        estimation and extreme value modelling. It also implements
+        mixture extreme value models and includes help on the choice of the
+        threshold within those models using MLE: either parametric / GPD,
+        semi-parametric / GPD or non-parametric / GPD.
+        
 
 -   ### [Peak-Over-Threshold by GPD approach:]{#UniPOT}
 
@@ -210,6 +280,8 @@ Summary of GEV density functions and GEV fitting functions
     -   The package `r pkg("texmex")` fit GPD models by using maximum 
         (optionally penalised-)likelihood, or Bayesian estimation, and 
         both classes of models may be fitted with covariates in any/all model parameters.     
+    -   The package `r pkg("NHPoisson")` provides a function to fit
+        non-homogeneous Poisson processes for peak over threshold analysis. 
     
     
 Summary of GPD density functions and GPD fitting functions
@@ -236,45 +308,13 @@ Summary of GPD density functions and GPD fitting functions
 | texmex	        |`dgpd`	  |`u`	      |`sigma`	  |`xi`	      |`evm`	      |`y`	       |`th`	      |NA	        |`coefficients`  |NA           |
 | TLMoments	      |`dgpd`	  |`loc`	    |`scale`	  |`shape`	   | NA	        |NA	        |NA	          |NA	        |NA	            |NA           |
  
-    
-        
 
--   ### [Extremal index estimation approach:]{#UniExtremalIndex}
+-   ### [Record models:]{#UniRecord}
+    -   `r pkg("RecordTest")` studies the analysis of record-breaking events 
+    and provides non-parametric modeling/testing of a non-stationary behaviour 
+    in (extreme) records. 
+    -   `r pkg("evir")` provides only a function `records()` for extracting records.
 
-    -   The package `r pkg("evd")` implements univariate
-        estimation for extremal index estimation approach.
-    -   the package `r pkg("evir")` includes extremal index
-        estimation.
-    -   The package `r pkg("extRemes")` also provides EVDs
-        univariate estimation for the block maxima and poisson point
-        process approache by MLE. It also incorporates a
-        non-stationarity through the parameters.
-    -   The package `r pkg("extremefit")` provides
-        modelization of exceedances over a threshold in the Pareto type
-        tail. It computes an adaptive choice of the threshold.  
-    -   The package `r pkg("ExtremeRisks")` provides risk measures
-        such as Expectile, Value-at-Risk, for univariate independent 
-        observations and temporal dependent observations. 
-        The statistical inference is performed through parametric 
-        and non-parametric estimators. 
-        Inferential procedures such as confidence intervals, confidence 
-        regions and hypothesis testing are obtained by exploiting the asymptotic theory.     
-    -   The package `r pkg("fExtremes")` provides univariate
-        data processing and modelling. It includes extremal index
-        estimation.
-    -   The package `r pkg("mev")` provides extremal index
-        estimators based on interexceedance time (MLE and iteratively
-        reweigthed least square estimators of Suveges (2007)). It
-        provides the information matrix test statistic proposed by
-        Suveges and Davison (2010) and MLE for the extremal index.
-    -   The package `r pkg("ReIns")` provides functions for
-        extremal index and splicing approaches in a reinsurance
-        perspective.
-    -   The package `r pkg("ptsuite")` implements various
-        estimation methods for the shape parameter of Pareto distributed
-        data.
-    -   The package `r pkg("evgam")` implements a moment-based estimator
-        of extremal index based on Ferro and Segers (2003).
 
 -   ### [Regression models:]{#UniRegression}
 
@@ -295,39 +335,6 @@ Summary of GPD density functions and GPD fitting functions
         extreme value distributions with parameters of generalised additive 
         model (GAM) form. 
 
-
--   ### [Mixture distribution or composite distribution approach:]{#UniMixture}
-
-    -   The package `r pkg("evmix")` provides kernel density
-        estimation and extreme value modelling. It also implements
-        mixture extreme value models and includes help on the choice of the
-        threshold within those models using MLE: either parametric / GPD,
-        semi-parametric / GPD or non-parametric / GPD.
-        
--   ### [Bayesian approach:]{#UniBayesian}
-
-    -   The package `r pkg("extRemes")` also provides bayesian estimation.    
-    -   The package `r pkg("MCMC4Extremes")` proposes some functions 
-        to perform posterior estimation for some distribution, with an
-        emphasis to extreme value distributions.
-    -   The package `r pkg("revdbayes")` provides the
-        Bayesian analysis of univariate extreme value models using
-        direct random sampling from the posterior distribution, that is,
-        without using MCMC methods.    
-    -   The package `r pkg("texmex")` fit GPD models by using maximum 
-        (optionally penalised-)likelihood, or Bayesian estimation, and 
-        both classes of models may be fitted with covariates in any/all model parameters.         
-    
-|package        | function      | models[^1]  | covariates  | sampling[^2]  | prior choice  | generic functions |
-|:--------------|:--------------|:------------|:------------|:--------------|:--------------|:------------------|
-|`extRemes`     | `fevd`        | 1--4,*      | all         | RWMH          | custom        | plot, summary       |
-|`MCMC4Extremes`|`ggev`,`gpdp`  | 1--2,*      | no          | RWMH          | fixed         | plot, summary       |
-|`revdbayes`    | `rpost`       | 1--4        | no          | RU            | custom        | plot, summary       |
-|`texmex`       | `evm`         | 1--2,*      | all         | IMH           | gaussian      | plot, summary, density,correlogram|
-        
-[^1]model family: generalized extreme value distribution (1), generalized Pareto distribution (2), inhomogeneous Poisson process (3), order statistics/r-largest (4) or custom/other (*).    
-
-[^2]sampling: random walk Metropolis--Hastings (RWMH), exact sampling ratio-of-uniform (RU), independent Metropolis--Hastings (IMH) 
     
 -   ### [Threshold selection:]{#UniThreshold}
 
@@ -343,16 +350,19 @@ Summary of GPD density functions and GPD fitting functions
         median, minimum density power divergence). L-moments diagrams
         and from the properties of a non-homogeneous Poisson process
         techniques are provided for the selection of the threshold.
-
--   ### [Record models:]{#UniRecord}
-    -   `r pkg("RecordTest")` studies the analysis of record-breaking events 
-    and provides non-parametric modeling/testing of a non-stationary behaviour 
-    in (extreme) records. 
-    -   `r pkg("evir")` provides only a function `records()` for extracting records.
-        
+      
         
 [Bivariate Extreme Value Theory:]{#BivEVT}
 ------------------------------------------
+        
+-   ### [Copula approach:]{#BiCopula}
+
+    -   The package `r pkg("copula")` provides utilities for
+        exploring and modelling a wide range of commonly used copulas,
+        see also the `r view("Distributions")` task view
+        (copula section).        
+    -   The pacage `r pkg("fCopulae")` provides utilities to fit
+        bivariate extreme copulas.
 
 -   ### [Maxima approach:]{#BiMaxima}
 
@@ -382,18 +392,34 @@ Summary of GPD density functions and GPD fitting functions
 
     -   The package `r pkg("RTDE")` implements bivariate
         estimation for the tail dependence coefficient.
-        
--   ### [Copula approach:]{#BiCopula}
-
-    -   The package `r pkg("copula")` provides utilities for
-        exploring and modelling a wide range of commonly used copulas,
-        see also the `r view("Distributions")` task view
-        (copula section).        
-    -   The pacage `r pkg("fCopulae")` provides utilities to fit
-        bivariate extreme copulas.
 
 [Multivariate Extreme Value Theory:]{#MultiEVT}
 -----------------------------------------------
+
+-   ### [Bayesian approach:]{#MultiBayesian}
+
+    -   The package `r pkg("SpatialExtremes")` provides 
+        tools for the statistical modelling of spatial extremes 
+        using Bayesian hierarchical models (fitting, checking,
+        selection).
+    -   The package `r pkg("ExtremalDep")` also provides function to fit 
+        a multivariate extreme value using Bayesian inference.
+        
+-   ### [Copula approach:]{#MultiCopula}
+
+    -   The package `r pkg("SpatialExtremes")` provides functions
+        to estimate a copula-based model to spatial extremes as well
+        as model checking and selection.
+    -   The package `r pkg("copula")` provides utilities for
+        exploring and modelling a wide range of commonly used copulas.
+        Extreme value copulas and non-parametric estimates of extreme
+        value copulas are implemented. See also the
+        `r view("Distributions")` task view (copula
+        section).
+    -   The package `r pkg("SimCop")` has functionalities 
+        for simulation of some bivariate extreme value 
+        distributions and the multivariate logistic model, 
+        or Gumbel copula.
 
 -   ### [Multivariate Maxima:]{#MultiMaxima}
 
@@ -436,30 +462,6 @@ Summary of GPD density functions and GPD fitting functions
         implementing minimal distance estimation methods for 
         parametric tail dependence models.
 
--   ### [Copula approach:]{#MultiCopula}
-
-    -   The package `r pkg("SpatialExtremes")` provides functions
-        to estimate a copula-based model to spatial extremes as well
-        as model checking and selection.
-    -   The package `r pkg("copula")` provides utilities for
-        exploring and modelling a wide range of commonly used copulas.
-        Extreme value copulas and non-parametric estimates of extreme
-        value copulas are implemented. See also the
-        `r view("Distributions")` task view (copula
-        section).
-    -   The package `r pkg("SimCop")` has functionalities 
-        for simulation of some bivariate extreme value 
-        distributions and the multivariate logistic model, 
-        or Gumbel copula.
-
--   ### [Bayesian approach:]{#MultiBayesian}
-
-    -   The package `r pkg("SpatialExtremes")` provides 
-        tools for the statistical modelling of spatial extremes 
-        using Bayesian hierarchical models (fitting, checking,
-        selection).
-    -   The package `r pkg("ExtremalDep")` also provides function to fit 
-        a multivariate extreme value using Bayesian inference.
     
 -   ### [Statistical tests:]{#MultiTests}
 
@@ -575,7 +577,7 @@ Graphics for multivariate extreme value analysis
 
 
 
-### Links
+### Links to review papers
 
 -   [Gilleland, Eric, Mathieu Ribatet, and Alec G. Stephenson, A software review for extreme value analysis Extremes 16(1) (2013): 103-119](https://doi.org/10.1007/s10687-012-0155-0)
 -   [Alec G. Stephenson and Eric Gilleland, Software for the analysis of extreme events: The current state and future directions. Extremes 8:87–109 (2006)](https://doi.org/10.1007/s10687-006-7962-0)
