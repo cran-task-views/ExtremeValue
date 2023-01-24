@@ -37,20 +37,21 @@ or pull request in the GitHub repository linked above.
 
 ### Table of contents
 - [Univariate Extreme Value Theory](#UnivEVT)
-  - [Block Maxima approach](#UniBlockMaxima)
-  - [Peak-Over-Threshold by GPD approach](#UniPOT)
-  - [Extremal index estimation approach](#UniExtremalIndex)
-  - [Regression models](#UniRegression)
-  - [Mixture distribution or composite distribution approach](#UniMixture)
   - [Bayesian approach](#UniBayesian)
+  - [Block Maxima approach](#UniBlockMaxima)
+  - [Extremal index estimation approach](#UniExtremalIndex)
+  - [Mixture distribution or composite distribution approach](#UniMixture)
+  - [Peak-Over-Threshold by GPD approach](#UniPOT)
+  - [Record models](#UniRecord)
+  - [Regression models](#UniRegression)
   - [Threshold selection](#UniThreshold)
-
+  
 - [Bivariate Extreme Value Theory](#BivEVT) 
+  - [Copula approach](#BiCopula)
   - [Maxima approach](#BiMaxima)
   - [Peak-Over-Threshold by GPD approach](#BiPOT)
   - [Tail dependence coefficient approach](#BiTailDependence)
-  - [Copula approach](#BiCopula)
-
+  
 - [Multivariate Extreme Value Theory](#MultiEVT) 
   - [Multivariate Maxima](#MultiMaxima)
   - [Peak-Over-Threshold by GPD approach](#BiPOT)
@@ -342,6 +343,13 @@ Summary of GPD density functions and GPD fitting functions
         median, minimum density power divergence). L-moments diagrams
         and from the properties of a non-homogeneous Poisson process
         techniques are provided for the selection of the threshold.
+
+-   ### [Record models:]{#UniRecord}
+    -   `r pkg("RecordTest")` studies the analysis of record-breaking events 
+    and provides non-parametric modeling/testing of a non-stationary behaviour 
+    in (extreme) records. 
+    -   `r pkg("evir")` provides only a function `records()` for extracting records.
+        
         
 [Bivariate Extreme Value Theory:]{#BivEVT}
 ------------------------------------------
