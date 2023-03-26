@@ -2,8 +2,8 @@
 name: ExtremeValue
 topic: Extreme Value Analysis
 maintainer: Christophe Dutang
-email: Christophe.Dutang@ensimag.fr
-version: 2023-01-24
+email: dutangc@gmail.com
+version: 2023-03-26
 source: https://github.com/cran-task-views/ExtremeValue/
 ---
 
