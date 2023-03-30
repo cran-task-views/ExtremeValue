@@ -3,7 +3,7 @@ name: ExtremeValue
 topic: Extreme Value Analysis
 maintainer: Christophe Dutang
 email: dutangc@gmail.com
-version: 2023-03-26
+version: 2023-03-30
 source: https://github.com/cran-task-views/ExtremeValue/
 ---
 
@@ -80,8 +80,7 @@ Also, some implementations allow the use of parameters in
 vectorized form and some can provide the derivatives w.r.t. the parameters.
 Nevertheless, the `r pkg("nieve")` package provides symbolic
 differentiation for two EVT probability distribution (GPD and GEV) 
-in order to compute the log-likelihood. A great care is done to handle
-the near-exponential case.
+in order to compute the log-likelihood. 
 
 -   ### [Bayesian approach:]{#UniBayesian}
 
