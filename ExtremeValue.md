@@ -3,7 +3,7 @@ name: ExtremeValue
 topic: Extreme Value Analysis
 maintainer: Christophe Dutang
 email: dutangc@gmail.com
-version: 2023-03-30
+version: 2023-08-04
 source: https://github.com/cran-task-views/ExtremeValue/
 ---
 
@@ -544,39 +544,25 @@ Graphics for multivariate extreme value analysis
 
 
 
+## Bibliography
 
-[Classical books and review papers:]{#References}
--------------------------------------------------
+### Review papers
 
--   E. Gilleland, M. Ribatet, A. Stephenson (2013). A Software Review
-    for Extreme Value Analysis, *Extremes* , **16** , 103-119.
--   R.-D. Reiss, M. Thomas (2007). *Statistical Analysis of Extreme
-    Values with Applications to Insurance, Finance, Hydrology and Other
-    Fields* , Springer-Verlag.
--   L. de Haan, A. Ferreira (2006). *Extreme Value Theory: An
-    Introduction* , Springer-Verlag.
--   Stephenson AG, Gilleland E (2006). Software for the analysis of extreme events: The current state and future directions. *Extremes*, **8**, 87–109.
--   J. Beirlant, Y. Goegebeur, J. Teugels, J. Segers (2004). *Statistics
-    of Extremes: Theory and Applications* , John Wiley & Sons.
--   B. Finkenstaedt, H. Rootzen (2004). *Extreme Values in Finance,
-    Telecommunications, and the Environment* , Chapman & Hall/CRC.
--   S. Coles (2001). *An Introduction to Statistical Modeling of Extreme
-    Values* , Springer-Verlag.
--   P. Embrechts, C. Klueppelberg, T. Mikosch (1997). *Modelling
-    Extremal Events for Insurance and Finance* , Springer-Verlag.
--   S.I. Resnick (1987). *Extreme Values, Regular Variation and Point
-    Processes* , Springer-Verlag.
--   Smith, R.L. (1987). Approximations in extreme value theory.
-    Technical report 205, Center for Stochastic Process, University of
-    North Carolina, 1--34.
--   Suveges (2007) Likelihood estimation of the extremal index.
-    Extremes, 10(1), 41-55.
--   Suveges and Davison (2010), Model misspecification in peaks over
-    threshold analysis. Annals of Applied Statistics, 4(1), 203-221.
+-   L. Belzile, C. Dutang, P. Northrop, T. Opitz, *A modeler's guide to extreme value software*, Extremes, 2023, `r doi("10.1007/s10687-023-00475-9")`.
+-   E. Gilleland, M. Ribatet, A. Stephenson (2013). *A Software Review for Extreme Value Analysis*, Extremes, 16, 103-119, `r doi("10.1007/s10687-012-0155-0")`.
+-   A.G. Stephenson, E. Gilleland (2006). *Software for the analysis of extreme events: The current state and future directions*. Extremes, 8, 87–109, `r doi("10.1007/s10687-006-7962-0")`.
+
+### Classical books
+
+-   R.-D. Reiss, M. Thomas (2007). *Statistical Analysis of Extreme Values with Applications to Insurance, Finance, Hydrology and Other Fields*, Springer-Verlag, `r doi("10.1007/978-3-7643-7399-3")`.
+-   L. de Haan, A. Ferreira (2006). *Extreme Value Theory: An Introduction*, Springer-Verlag, `r doi("10.1007/0-387-34471-3")`.
+-   J. Beirlant, Y. Goegebeur, J. Teugels, J. Segers (2004). *Statistics of Extremes: Theory and Applications* , John Wiley & Sons, `r doi("10.1002/0470012382")`.
+-   B. Finkenstaedt, H. Rootzen (2004). *Extreme Values in Finance, Telecommunications, and the Environment* , Chapman & Hall/CRC, `r doi("10.1201/9780203483350")`.
+-   S. Coles (2001). *An Introduction to Statistical Modeling of Extreme Values*, Springer-Verlag, `r doi("10.1007/978-1-4471-3675-0")`.
+-   P. Embrechts, C. Klueppelberg, T. Mikosch (1997). *Modelling Extremal Events for Insurance and Finance*, Springer-Verlag, `r doi("10.1007/978-3-642-33483-2")`.
+-   S.I. Resnick (1987). *Extreme Values, Regular Variation and Point Processes*, Springer-Verlag.
+-   R.L. Smith (1987). *Approximations in extreme value theory*. Technical report 205, Center for Stochastic Process, University of North Carolina, 1--34.
+-   M. Suveges (2007). *Likelihood estimation of the extremal index*. Extremes, 10(1), 41-55, `r doi("10.1007/s10687-007-0034-2")`.
+-   Suveges and Davison (2010), *Model misspecification in peaks over threshold analysis*. Annals of Applied Statistics, 4(1), 203-221.
 
 
-
-### Links to review papers
-
--   [Gilleland, Eric, Mathieu Ribatet, and Alec G. Stephenson, A software review for extreme value analysis Extremes 16(1) (2013): 103-119](https://doi.org/10.1007/s10687-012-0155-0)
--   [Alec G. Stephenson and Eric Gilleland, Software for the analysis of extreme events: The current state and future directions. Extremes 8:87–109 (2006)](https://doi.org/10.1007/s10687-006-7962-0)
