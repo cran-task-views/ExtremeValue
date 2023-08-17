@@ -214,6 +214,7 @@ Summary of GPD density functions and GPD fitting functions
 -   The package `r pkg("ismev")` provides a collection of functions to fit a point process with explanatory variables (diagnostic plot, MLE) and follows the book of Coles (2001).
 -   The package `r pkg("texmex")` fit GPD models by using maximum (optionally penalised-)likelihood, or Bayesian estimation, and both classes of models may be fitted with covariates in any/all model parameters.    
 -   The package `r pkg("evgam")` provides methods for fitting various extreme value distributions with parameters of generalised additive model (GAM) form. 
+- The package `r pkg("GJRM")` allows to fit generalized smooth/additive models (GAM like regressions) for location,  scale and shape. It incorporates as margin some distributions linked to extreme value analysis and allows parametrization of location and scale for these distributions: Margin generalized Pareto, generalized Pareto II, generalized Pareto with orthogonal parametrization, discrete generalized Pareto, discrete generalized Pareto II, discrete generalized Pareto.
 
     
 ## [Threshold selection]{#UniThreshold}
