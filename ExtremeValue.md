@@ -3,7 +3,7 @@ name: ExtremeValue
 topic: Extreme Value Analysis
 maintainer: Christophe Dutang
 email: dutangc@gmail.com
-version: 2023-08-17
+version: 2023-11-04
 source: https://github.com/cran-task-views/ExtremeValue/
 ---
 
@@ -145,7 +145,6 @@ Summary of GEV density functions and GEV fitting functions
 -   The package `r pkg("fExtremes")` provides univariate data processing and modelling. It includes extremal index estimation.
 -   The package `r pkg("mev")` provides extremal index estimators based on interexceedance time (MLE and iteratively reweigthed least square estimators of Suveges (2007)). It provides the information matrix test statistic proposed by Suveges and Davison (2010) and MLE for the extremal index.
 -   The package `r pkg("ReIns")` provides functions for extremal index and splicing approaches in a reinsurance perspective.
--   The package `r pkg("ptsuite")` implements various estimation methods for the shape parameter of Pareto distributed data.
 -   The package `r pkg("evgam")` implements a moment-based estimator of extremal index based on Ferro and Segers (2003).
 
 
@@ -367,7 +366,7 @@ Graphics for multivariate extreme value analysis
 
 ### Review papers
 
--   L. Belzile, C. Dutang, P. Northrop, T. Opitz, *A modeler's guide to extreme value software*, Extremes, 2023, `r doi("10.1007/s10687-023-00475-9")`.
+-   L. Belzile, C. Dutang, P. Northrop, T. Opitz (2023), *A modeler's guide to extreme value software*, Extremes, `r doi("10.1007/s10687-023-00475-9")`.
 -   E. Gilleland, M. Ribatet, A. Stephenson (2013). *A Software Review for Extreme Value Analysis*, Extremes, 16, 103-119, `r doi("10.1007/s10687-012-0155-0")`.
 -   A.G. Stephenson, E. Gilleland (2006). *Software for the analysis of extreme events: The current state and future directions*. Extremes, 8, 87–109, `r doi("10.1007/s10687-006-7962-0")`.
 
@@ -380,8 +379,10 @@ Graphics for multivariate extreme value analysis
 -   S. Coles (2001). *An Introduction to Statistical Modeling of Extreme Values*, Springer-Verlag, `r doi("10.1007/978-1-4471-3675-0")`.
 -   P. Embrechts, C. Klueppelberg, T. Mikosch (1997). *Modelling Extremal Events for Insurance and Finance*, Springer-Verlag, `r doi("10.1007/978-3-642-33483-2")`.
 -   S.I. Resnick (1987). *Extreme Values, Regular Variation and Point Processes*, Springer-Verlag.
--   R.L. Smith (1987). *Approximations in extreme value theory*. Technical report 205, Center for Stochastic Process, University of North Carolina, 1--34.
--   M. Suveges (2007). *Likelihood estimation of the extremal index*. Extremes, 10(1), 41-55, `r doi("10.1007/s10687-007-0034-2")`.
+
+
+### Scientific papers
+
 -   Suveges and Davison (2010), *Model misspecification in peaks over threshold analysis*. Annals of Applied Statistics, 4(1), 203-221.
-
-
+-   M. Suveges (2007). *Likelihood estimation of the extremal index*. Extremes, 10(1), 41-55, `r doi("10.1007/s10687-007-0034-2")`.
+-   R.L. Smith (1987). *Approximations in extreme value theory*. Technical report 205, Center for Stochastic Process, University of North Carolina, 1--34.
