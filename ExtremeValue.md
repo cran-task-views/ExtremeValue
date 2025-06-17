@@ -3,7 +3,7 @@ name: ExtremeValue
 topic: Extreme Value Analysis
 maintainer: Christophe Dutang
 email: dutangc@gmail.com
-version: 2023-11-04
+version: 2025-06-17
 source: https://github.com/cran-task-views/ExtremeValue/
 ---
 
@@ -106,7 +106,7 @@ in order to compute the log-likelihood.
 -   The package `r pkg("climextRemes")` provides functions for fitting GEV via point process fitting for extremes in climate data, providing return values, return probabilities, and return periods for stationary and nonstationary models. 
 -   The package `r pkg("evd", priority = "core")` provides functions for a wide range of univariate distributions. Modelling function allow estimation of parameters for standard univariate extreme value methods.
 -   The package `r pkg("evir", priority = "core")` performs modelling of univariate GEV distributions by maximum likelihood fitting.
--   The package `r pkg("extRemes", priority = "core")` provides EVDs univariate estimation for block maxima model approache by MLE. It also incorporates a non-stationarity through the parameters of the EVDs and L-moments estimation for the stationary case for the GEV distributions. Finally, it has also Bayes estimation capabilities. A separate package `r pkg("in2extRemes")` provides some GUI interfaces to `r pkg("extRemes", priority = "core")`.
+-   The package `r pkg("extRemes", priority = "core")` provides EVDs univariate estimation for block maxima model approache by MLE. It also incorporates a non-stationarity through the parameters of the EVDs and L-moments estimation for the stationary case for the GEV distributions. Finally, it has also Bayes estimation capabilities. 
 -   The package `r pkg("extremeStat")` includes functions to fit multiple GEV distributions types available in the package `r pkg("lmomco")` using linear moments to estimate the parameters.
 -   The package `r pkg("fExtremes")` provides univariate data processing and modelling. It includes clustering, block maxima identification and exploratory analysis. The estimation of stationary models for the GEV is provided by maximum likelihood and probability weighted moments.
 -   The package `r pkg("ismev")` provides a collection of three functions to fit the GEV (diagnostic plot, MLE, likelihood profile) and follows the book of Coles (2001).    
