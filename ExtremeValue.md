@@ -3,7 +3,7 @@ name: ExtremeValue
 topic: Extreme Value Analysis
 maintainer: Christophe Dutang
 email: dutangc@gmail.com
-version: 2025-06-17
+version: 2025-12-16
 source: https://github.com/cran-task-views/ExtremeValue/
 ---
 
@@ -175,6 +175,7 @@ Pareto distribution.
 -   The package `r pkg("SpatialExtremes", priority = "core")` provides different approaches for fitting/selecting the threshold in generalized Pareto distributions. Most of them are based on minimizing the AMSE-criterion or at least by reducing the bias of the assumed GPD-model.
 -   The package `r pkg("texmex")` fit GPD models by using maximum (optionally penalised-)likelihood, or Bayesian estimation, and both classes of models may be fitted with covariates in any/all model parameters.     
 -   The package `r pkg("NHPoisson")` provides a function to fit non-homogeneous Poisson processes for peak over threshold analysis. 
+-   The package `r pkg("heavytails")` provides peak over threshold analysis as well as other types of estimators. 
     
     
 Summary of GPD density functions and GPD fitting functions
@@ -183,7 +184,7 @@ Summary of GPD density functions and GPD fitting functions
 |-----------------|:--------|:---------|:----------|:-----------|:------------|:----------|:------------|:----------|:--------------|:--------------|
 | ercv	          |NA	      |NA	        |NA	        |NA	        |`fitpot`	    |`data`	    |`threshold`	|NA	        |`coeff`	      |NA           |
 | eva	            |`dgpd`	  |`loc`	    |`scale`	  |`shape`	  |`gpdFit`	    |`data`	    |`threshold`	|NA	        |`par.ests`	    |NA           |
-| evd	           | `dgpd`	  |`loc`	    |`scale`	  |`shape`	  |`fpot`	      |`x`	      |`threshold`	|NA	        |`estimate`	    |NA           |
+| evd	            |`dgpd`	  |`loc`	    |`scale`	  |`shape`	  |`fpot`	      |`x`	      |`threshold`	|NA	        |`estimate`	    |NA           |
 | evir	          |`dgpd`	  |`mu`	      |`beta`	    |`xi`	      |`gpd`	      |`data`	    |`threshold`	|NA	        |`par.ests`	    |NA           |
 | extraDistr	    |`dgpd`	  |`mu`	      |`sigma`	  |`xi`	      |NA	          |NA	        |NA	          |NA	        |NA	            |NA           |
 | extRemes	      |`devd` 	|`loc`	    |`scale`	  |`shape`	  |`fevd`	      |`x`	      |`threshold`	|NA	        |`results`	    |`par`           |
@@ -195,11 +196,12 @@ Summary of GPD density functions and GPD fitting functions
 | QRM	            |`dGPD`	  |NA	        |`beta`	    |`xi`	      |`fit.GPD`	  |`data`	    |`threshold`	|NA	        |`par.ests`	    |NA           |
 | ReIns	          |`dgpd`	  |`mu`  	    |`sigma`	  |`gamma`	  |`GPDfit`	    |`data`	    |NA	          |NA	        |NA	            |NA           |
 | Renext	        |`dGPD`	  |`loc`	    |`scale`	  |`shape`	  |`fGPD`	      |`x`	      |NA	          |NA	        |`estimate`	    |NA           |
-| revdbayes	      |`dgp`	  |`loc`	    |`scale`	  |`shape`	   | NA	        |NA	        |NA	          |NA	        |NA	            |NA           |
+| revdbayes	      |`dgp`	  |`loc`	    |`scale`	  |`shape`	  | NA	        |NA	        |NA	          |NA	        |NA	            |NA           |
 | SpatialExtremes	|`dgpd`	  |`loc`	    |`scale`	  |`shape`	  |`gpdmle`	    |`x`	      |`threshold`	|NA	        |NA	            |NA           |
 | tea	            |`dgpd`	  |`loc`	    |`scale`	  |`shape`	  |`gpdFit`	    |`data`	    |`threshold`	|NA	        |`par.ests`	    |NA           |
-| texmex	        |`dgpd`	  |`u`	      |`sigma`	  |`xi`	      |`evm`	      |`y`	       |`th`	      |NA	        |`coefficients`  |NA           |
-| TLMoments	      |`dgpd`	  |`loc`	    |`scale`	  |`shape`	   | NA	        |NA	        |NA	          |NA	        |NA	            |NA           |
+| texmex	        |`dgpd`	  |`u`	      |`sigma`	  |`xi`	      |`evm`	      |`y`	      |`th`	        |NA	        |`coefficients`  |NA           |
+| TLMoments	      |`dgpd`	  |`loc`	    |`scale`	  |`shape`	  | NA	        |NA	        |NA	          |NA	        |NA	            |NA           |
+| heavytails	    | NA	    |NA    	    |NA      	  |NA.    	  |`pot_estimator` | `data` |`u`          |NA	        |NA	            |NA           |
  
 
 ## [Record models:]{#UniRecord}
